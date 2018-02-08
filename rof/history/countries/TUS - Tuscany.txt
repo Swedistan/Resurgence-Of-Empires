@@ -55,3 +55,17 @@ create_country_leader = {
 		#
 	}
 }
+
+create_corps_commander = {
+	name = "Basileo Petrella"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+	traits = { trickster }
+	skill = 1
+}
+
+create_corps_commander = {
+	name = "Giulio Figliola"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = { # }
+	skill = 3
+}
