@@ -561,3 +561,11 @@ PIE = {
 	color = rgb { 162  242  224 }
 	color_ui = rgb { 162  242  224 }
 }
+BAV = {
+	color = rgb { 136  220  247 }
+	color_ui = rgb { 55  157  191 }
+}
+KUR = {
+	color = rgb { 212  192  106 }
+	color_ui = rgb { 173  152  55 }
+}

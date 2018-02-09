@@ -11,14 +11,14 @@ state={
 	state_category = metropolis
 
 	history={
-		owner = PRS
+		owner = BAV
 		victory_points = { 11435 10 }
 		buildings = {
 			infrastructure = 7
 			industrial_complex = 3
 
 		}
-		add_core_of = PRS
+		add_core_of = BAV
 	
 		}
 
