@@ -15,6 +15,39 @@ ideas = {
 				army_core_defence_factor = 0.05
 			}
 		}
+		TUS_commune2 = {
+			allowed = {
+				original_tag = TUS
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_national_mobilization_focus
+			
+			modifier = {
+				communism_drift = 0.01
+				communism_acceptance = 10
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		TUS_commune3 = {
+			allowed = {
+				original_tag = TUS
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_national_mobilization_focus
+			
+			modifier = {
+				communism_drift = 0.01
+				communism_acceptance = 10
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				conscription_factor = 0.1
+			}
+		}
 		TUS_commiework = {
 			allowed = {
 				original_tag = TUS
@@ -28,6 +61,53 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.05
 				production_speed_buildings_factor = 0.05
 			}
+		}
+	}
+	naval_manufacturer = { 
+		
+		designer = yes
+		
+		TUS_naval_man1 = {
+			
+			picture = generic_naval_manufacturer_3
+
+			
+			allowed = {
+				original_tag = TUS
+			}
+			available = {
+				has_completed_focus = TUS_home_companies
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { TUS_naval_manufacturer }
+		}
+	}
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		TUS_materiel_man1 = {
+			
+			picture = generic_infantry_equipment_manufacturer_2
+
+			
+			allowed = {
+				original_tag = TUS
+			}
+			available = {
+				has_completed_focus = TUS_home_companies
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			traits = { TUS_infantry_equipment_manufacturer }
+
 		}
 	}
 }

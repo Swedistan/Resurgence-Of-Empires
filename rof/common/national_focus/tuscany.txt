@@ -1,0 +1,85 @@
+focus_tree = {
+	id = tuscan_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = TUS
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1100 }
+
+	focus = {
+		id = TUS_internal_structure
+		icon = GFX_goal_generic_soviet_construction
+		x = 2
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	
+	focus = {
+		id = TUS_state_propaganda
+		icon = GFX_focus_generic_join_comintern
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = TUS_internal_structure }
+		available = { TUS = { has_government = communism } }
+		
+		completion_reward = {
+			add_national_unity = 0.05
+			swap_ideas = { remove_idea = TUS_commune add_idea = TUS_commune2 }
+		}
+	}
+	
+	focus = {
+		id = TUS_enlist_army
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		x = 1
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = TUS_state_propaganda }
+		
+		completion_reward = {
+			swap_ideas = { remove_idea = TUS_commune2 add_idea = TUS_commune3 }
+		}
+	}
+	
+	focus = {
+		id = TUS_home_companies
+		icon = GFX_focus_generic_self_management
+		x = 3
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = TUS_internal_structure }
+		
+		completion_reward = {
+			custom_effect_tooltip = TUS_companies_available
+		}
+	}
+}
