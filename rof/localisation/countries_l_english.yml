@@ -959,18 +959,6 @@
  KOR_democratic_ADJ:0 "Korean"
  KOR_communism_ADJ:0 "Korean"
  KOR_neutrality_ADJ:0 "Korean"
- SER_fascism:0 "Serbian Empire"
- SER_fascism_DEF:0 "The Serbian Empire"
- SER_democratic:0 "Serbia"
- SER_democratic_DEF:0 "Serbia"
- SER_communism:0 "Socialist Republic of Serbia"
- SER_communism_DEF:0 "The Socialist Republic of Serbia"
- SER_neutrality:0 "Serbia"
- SER_neutrality_DEF:0 "Serbia"
- SER_fascism_ADJ:0 "Serbian"
- SER_democratic_ADJ:0 "Serbian"
- SER_communism_ADJ:0 "Serbian"
- SER_neutrality_ADJ:0 "Serbian"
  ICE_fascism:0 "Islandsveldi"
  ICE_fascism_DEF:0 "The Islandsveldi"
  ICE_democratic:0 "Iceland"
@@ -1427,6 +1415,8 @@
  PIE_neutrality_ADJ:0 "Piedmontese"
  PIE_communism_ADJ:0 "Piedmontese"
  #######################
+ ##Middle East
+ ##########################
  SAU_fascism:0 "Arabic Empire"
  SAU_fascism_DEF:0 "The Arabic Empire"
  SAU_democratic:0 "Arabian Republic"
@@ -1439,7 +1429,6 @@
  SAU_democratic_ADJ:0 "Arabian"
  SAU_neutrality_ADJ:0 "Arabian"
  SAU_communism_ADJ:0 "Arabian"
- ########################
  KUR_fascism:0 "Kurdish Empire"
  KUR_fascism_DEF:0 "The Kurdish Empire"
  KUR_democratic:0 "Kurdistan"
@@ -1452,7 +1441,6 @@
  KUR_democratic_ADJ:0 "Kurdish"
  KUR_neutrality_ADJ:0 "Kurdish"
  KUR_communism_ADJ:0 "Kurdish"
- ##########################
  PAL_fascism:0 "Jund Palestine"
  PAL_fascism_DEF:0 "Jund Palestine"
  PAL_democratic:0 "Palestine"
@@ -1465,7 +1453,6 @@
  PAL_fascism_ADJ:0 "Palestinian"
  PAL_neutrality_ADJ:0 "Palestinian"
  PAL_democratic_ADJ:0 "Palestinian"
- ###############################
  IRQ_fascism:0 "Al-Muthanna Iraq"
  IRQ_fascism_DEF:0 "Al-Muthanna Iraq"
  IRQ_democratic:0 "Iraqi Republic"
@@ -1479,18 +1466,20 @@
  IRQ_neutrality_ADJ:0 "Iraqi"
  IRQ_communism_ADJ:0 "Iraqi"
  ##############################
- PRS_fascism:0 "German Empire"
- PRS_fascism_DEF:0 "The German Empire"
+ ##Germany
+ ############################
+ PRS_fascism:0 "Prussian Empire"
+ PRS_fascism_DEF:0 "The Prussian Empire"
  PRS_democratic:0 "The Prussian Republic"
  PRS_democratic_DEF:0 "The Prussian Republic"
  PRS_neutrality:0 "The Kingdom of Prussia"
  PRS_neutrality_DEF:0 "The Kingdom of Prussia"
- PRS_communism:2 "Socialist German Piedmont"
- PRS_communism_DEF:1 "Socialist German Republic"
- PRS_fascism_ADJ:0 "German"
+ PRS_communism:0 "Socialist Prussian Republic"
+ PRS_communism_DEF:0 "Socialist Prussian Republic"
+ PRS_fascism_ADJ:0 "Prussian"
  PRS_democratic_ADJ:0 "Prussian"
  PRS_neutrality_ADJ:0 "Prussian"
- PRS_communism_ADJ:0 "German"
+ PRS_communism_ADJ:0 "Prussian"
  BAV_fascism:0 "Greater Bavaria"
  BAV_fascism_DEF:0 "Greater Bavarian Empire"
  BAV_democratic:0 "Republic of Bavaria"
@@ -1515,3 +1504,18 @@
  BDW_democratic_ADJ:0 "German"
  BDW_neutrality_ADJ:0 "German"
  BDW_communism_ADJ:0 "German"
+ ############################
+ ##Balkans
+ ############################
+ SER_fascism:0 "Serbian Empire"
+ SER_fascism_DEF:0 "The Serbian Empire"
+ SER_democratic:0 "Serbia"
+ SER_democratic_DEF:0 "Serbia"
+ SER_communism:0 "Socialist Republic of Serbia"
+ SER_communism_DEF:0 "The Socialist Republic of Serbia"
+ SER_neutrality:0 "Serbia"
+ SER_neutrality_DEF:0 "Serbia"
+ SER_fascism_ADJ:0 "Serbian"
+ SER_democratic_ADJ:0 "Serbian"
+ SER_communism_ADJ:0 "Serbian"
+ SER_neutrality_ADJ:0 "Serbian"
