@@ -121,3 +121,7 @@ IRQ = "countries/Iraq.txt"
 SAU = "countries/Saudi Arabia.txt"
 TUR = "countries/Turkey.txt"
 PAL = "countries/Palestine.txt"
+#####################
+BAV = "countries/Bavaria"
+PRS = "countries/Prussia"
+BDW = "countries/Baden-Wurttemberg"
