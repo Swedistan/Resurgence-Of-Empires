@@ -589,3 +589,22 @@ BDW = {
 	color = rgb { 224  224  114 }
 	color_ui = rgb { 122  122  74 }
 }
+##############
+##Russia
+##############
+TRO = {
+	color = rgb { 112  18  18 }
+	color_ui = rgb { 122  122  74 }
+}
+RUR = {
+	color = rgb { 61  224  110 }
+	color_ui = rgb { 122  122  74 }
+}
+RUS = {
+	color = rgb { 14  105  41 }
+	color_ui = rgb { 122  122  74 }
+}
+MOR = {
+	color = rgb { 227  221  134 }
+	color_ui = rgb { 122  122  74 }
+}

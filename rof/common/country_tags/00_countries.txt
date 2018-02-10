@@ -1,6 +1,5 @@
 GER	= "countries/Germany.txt"
 ENG = "countries/United Kingdom.txt"
-SOV = "countries/Soviet Union.txt"
 SWE	= "countries/Sweden.txt"
 FRA	= "countries/France.txt"
 LUX	= "countries/Luxemburg.txt"
@@ -108,6 +107,8 @@ PAK = "countries/Pakistan.txt"
 BOT = "countries/Botswana.txt"
 MAN = "countries/Manchukou.txt"
 #####################
+##Italy
+#####################
 RME = "countries/Rome.txt"
 TUS = "countries/Tuscany.txt"
 VNC = "countries/Venice.txt"
@@ -116,11 +117,15 @@ SCI = "countries/TwoSicilies"
 UID = "countries/UnitedItalianDuchies"
 PIE = "countries/Piedmont"
 #####################
+##Middle East
+#####################
 KUR = "countries/Kurdistan.txt"
 IRQ = "countries/Iraq.txt"
 SAU = "countries/Saudi Arabia.txt"
 TUR = "countries/Turkey.txt"
 PAL = "countries/Palestine.txt"
+#####################
+##Germany
 #####################
 BAV = "countries/Bavaria"
 PRS = "countries/Prussia"
@@ -128,3 +133,11 @@ BDW = "countries/Baden-Wurttemberg"
 HAN = "countries/Hanover"
 HES = "countries/Hessia"
 SAX = "countries/Saxony"
+####################
+##Russia
+#####################
+SOV = "countries/Soviet Union.txt"
+RUS = "countries/Russia.txt"
+TRO = "countries/Socialist Union.txt"
+RUR = "countries/Russian Republic.txt"
+MOR = "countries/Mountain.txt"

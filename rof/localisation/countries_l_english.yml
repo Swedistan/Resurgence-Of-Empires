@@ -1570,3 +1570,10 @@
  SER_democratic_ADJ:0 "Serbian"
  SER_communism_ADJ:0 "Serbian"
  SER_neutrality_ADJ:0 "Serbian"
+ ############################
+ ##Russia
+ ############################
+ RUS_neutrality:0 "Russian Empire"
+ RUR_democratic:0 "Russian Republic"
+ TRO_communism:0 "Socialist Union"
+ MOR_neutrality:0 "Caucus Mountain Republic"
