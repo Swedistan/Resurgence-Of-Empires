@@ -1,0 +1,63 @@
+﻿capital = 59
+
+#OOB = "ALB_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+}
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 15
+		}
+
+		fascism = {
+			popularity = 7
+		}
+		
+		communism = {
+			popularity = 5
+		}
+		
+		neutrality = { 
+			popularity = 73
+		}
+	}
+	
+	ruling_party = neutrality
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_convoys = 20
+
+create_faction = German_Confederation
+add_to_faction = HAN
+add_to_faction = BDW
+add_to_faction = SAX
+add_to_faction = HES
+add_to_faction = BAV
+
+#Victor Emmanuel III of Italy after 39
+#create_country_leader = {
+#	name = "King Zog"
+#	desc = "POLITICS_KING_ZOG_DESC"
+#	picture = "Portrait_Albania_King_Zog.dds"
+#	expire = "1965.1.1"
+#	ideology = despotism
+#	traits = {
+		#
+#	}
+#}
+
+#create_field_marshal = {
+#	name = "Xhemal Aranitasi"
+#	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+#	skill = 2
+#}
+

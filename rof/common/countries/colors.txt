@@ -569,3 +569,23 @@ KUR = {
 	color = rgb { 212  192  106 }
 	color_ui = rgb { 173  152  55 }
 }
+SAX = {
+	color = rgb { 78  163  69 }
+	color_ui = rgb { 44  110  36 }
+}
+HES = {
+	color = rgb { 247  168  172 }
+	color_ui = rgb { 161  109  112 }
+}
+HAN = {
+	color = rgb { 245  245  220 }
+	color_ui = rgb { 206  206  190 }
+}
+PRS = {
+	color = rgb { 0  49  83 }
+	color_ui = rgb { 0  49  83 }
+}
+BDW = {
+	color = rgb { 224  224  114 }
+	color_ui = rgb { 122  122  74 }
+}
