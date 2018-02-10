@@ -41,19 +41,16 @@ add_to_faction = HAN
 add_to_faction = BDW
 add_to_faction = SAX
 add_to_faction = HES
-add_to_faction = BAV
 
-#Victor Emmanuel III of Italy after 39
-#create_country_leader = {
-#	name = "King Zog"
-#	desc = "POLITICS_KING_ZOG_DESC"
-#	picture = "Portrait_Albania_King_Zog.dds"
-#	expire = "1965.1.1"
-#	ideology = despotism
-#	traits = {
-		#
-#	}
-#}
+create_country_leader = {
+	name = "Ernst August III"
+	##desc = "POLITICS_KING_ZOG_DESC"
+	##picture = "Portrait_Albania_King_Zog.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+	}
+}
 
 #create_field_marshal = {
 #	name = "Xhemal Aranitasi"

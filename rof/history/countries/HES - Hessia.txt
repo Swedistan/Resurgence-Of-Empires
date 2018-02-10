@@ -12,7 +12,7 @@ set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 5
+			popularity = 53
 		}
 
 		fascism = {
@@ -20,33 +20,31 @@ set_politics = {
 		}
 		
 		communism = {
-			popularity = 93
+			popularity = 5
 		}
 		
 		neutrality = { 
-			popularity = 0
+			popularity = 32
 		}
 	}
 	
-	ruling_party = communism
+	ruling_party = democratic
 	last_election = "1933.3.5"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 
 set_convoys = 20
 
-#Victor Emmanuel III of Italy after 39
-#create_country_leader = {
-#	name = "King Zog"
-#	desc = "POLITICS_KING_ZOG_DESC"
-#	picture = "Portrait_Albania_King_Zog.dds"
-#	expire = "1965.1.1"
-#	ideology = despotism
-#	traits = {
-		#
-#	}
-#}
+create_country_leader = {
+	name = "Bernhard Adelung"
+	##desc = "POLITICS_KING_ZOG_DESC"
+	##picture = "Portrait_Albania_King_Zog.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+	}
+}
 
 #create_field_marshal = {
 #	name = "Xhemal Aranitasi"
