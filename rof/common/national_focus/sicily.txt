@@ -248,13 +248,17 @@ focus_tree = {
 				limit = {
 					threat < 0.5
 				}
-				puppet = ALB 
+				ALB = {
+					country_event = { days = 10 id = Sicily.3 }
+				}
 			}
 			if = {
 				limit = {
 					threat > 0.5
 				}
-				annex_country = { target = ALB } 
+				ALB = {
+					country_event = { days = 10 id = Sicily.1 }
+				}
 			}
 		}
 	}

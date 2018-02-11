@@ -1,0 +1,88 @@
+﻿###########################
+# Italian Events
+###########################
+
+add_namespace = Sicily
+
+# Albanian demand, threat > 50
+country_event = {
+	id = Sicily.1
+	title = Sicily.1.t
+	desc = Sicily.1.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = { #accept
+		name = Sicily.1.a
+		SCI = {
+			add_threat = 2 
+			annex_country = { target = ALB }
+		}
+	}
+	option = { #refuse
+		name = Sicily.1.b
+		SCI = {
+			country_event = { days = 10 id = Sicily.2 } 
+		}
+	}
+}
+# Albanian demand rejected, threat > 50
+country_event = {
+	id = Sicily.2
+	title = Sicily.2.t
+	desc = Sicily.2.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Sicily.2.a
+		create_wargoal = { type = annex_everything target = ALB } 
+		add_threat = 5 
+	}
+	option = {
+		name = Sicily.2.b
+		add_political_power = -50
+	}
+}
+# Albanian demand, threat < 50
+country_event = {
+	id = Sicily.3
+	title = Sicily.3.t
+	desc = Sicily.3.d
+	
+	is_triggered_only = yes
+	
+	option = { #accept
+		name = Sicily.3.a
+		SCI = {
+			add_threat = 2 
+			puppet = ALB
+		}
+	}
+	option = { #refuse
+		name = Sicily.3.b
+		SCI = {
+			country_event = { days = 10 id = Sicily.4 } 
+		}
+	}
+}
+# Albanian demand rejected, threat < 50
+country_event = {
+	id = Sicily.4
+	title = Sicily.4.t
+	desc = Sicily.4.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Sicily.4.a
+		create_wargoal = { type = puppet_wargoal_focus target = ALB } 
+		add_threat = 5 
+	}
+	option = {
+		name = Sicily.4.b
+		add_political_power = -50
+	}
+}
