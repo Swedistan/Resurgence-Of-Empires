@@ -30,22 +30,25 @@ focus_tree = {
 			add_political_power = 120
 		}
 	}
-
-	focus = {
-		id = establish_the_legions
+        focus = {
+	        id = establish_the_legions
 		icon = GFX_goal_generic_political_pressure
 		text = "Establish The Legions"
 		prerequisite = { focus = RME_Found_Our_Nation }
-		x = 2
-		y = 1
+		x = 16
+		y = 3
 		cost = 10
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-		    add_ideas = militarism_focus
-			army_experience = 20
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
 			}			
+			add_ideas = militarism_focus
+			army_experience = 20
+			set_rule = { can_send_volunteers = yes }
 		}
 	}
 }
