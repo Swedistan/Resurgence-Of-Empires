@@ -60,7 +60,7 @@ units = {
 	}
 	
 	navy = {				
-		name = "Communard Navy"
+		name = "Sicilian Navy"
 		base = 10074
 		location = 10074
 		ship = { name = "Napoli" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = SCI } } }		
@@ -74,7 +74,7 @@ air_wings = {
 	117 = { 
 		fighter_equipment_0 = {
 			owner = "SCI" 
-			amount = 36
+			amount = 24
 		}
 	}
 }

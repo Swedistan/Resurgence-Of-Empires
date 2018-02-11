@@ -51,6 +51,142 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SIC_bulwark_of_democracy
+		#icon = GFX_goal_generic_soviet_construction
+		x = 3
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive  = { focus = SIC_political_isolation }
+		prerequisite = { focus = SIC_bulwark_of_democracy }
+		completion_reward = {
+			set_rule = { can_send_volunteers = yes }
+		}
+	}
+	focus = {
+		id = SIC_united_duchies_democracy
+		#icon = GFX_goal_generic_soviet_construction
+		x = 3
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			threat > 0.2
+		}
+		bypass = { 
+			OR = {
+				UID = {
+					has_government = democratic
+				}
+				UID = { exists = no } 
+			}
+		}
+		prerequisite = { focus = SIC_election_democratic }
+		completion_reward = {
+			create_wargoal = { type = topple_government target = UID } 
+		}
+	}
+	focus = {
+		id = SIC_political_isolation
+		#icon = GFX_goal_generic_soviet_construction
+		x = 5
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive  = { focus = SIC_bulwark_of_democracy }
+		prerequisite = { focus = SIC_election_democratic }
+		completion_reward = {
+			add_ideas = deterrence
+		}
+	}
+	focus = {
+		id = SIC_wake_up
+		#icon = GFX_goal_generic_soviet_construction
+		x = 5
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			threat > 0.5
+		}
+		prerequisite = { focus = SIC_political_isolation }
+		completion_reward = {
+			remove_ideas = deterrence
+		}
+	}
+	focus = {
+		id = SIC_italian_democracy
+		#icon = GFX_goal_generic_soviet_construction
+		x = 4
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			threat > 0.5
+		}
+		prerequisite = { focus = SIC_wake_up focus = SIC_united_duchies_democracy }
+		completion_reward = {
+			create_faction = "Italian_Union"
+			if = {
+				limit = {
+					UID = {
+						has_government = democratic
+					}
+				}
+				 add_to_faction = UID
+			}
+		}
+	}
+	focus = {
+		id = SIC_italian_democracy_milan
+		#icon = GFX_goal_generic_soviet_construction
+		x = 3
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			threat > 0.5
+		}
+		prerequisite = { focus = SIC_italian_democracy }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SIC_italian_democracy_venice
+		#icon = GFX_goal_generic_soviet_construction
+		x = 5
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			threat > 0.5
+		}
+		prerequisite = { focus = SIC_italian_democracy }
+		completion_reward = {
+		}
+	}
+	focus = {
 		id = SIC_election_neutrality
 		#icon = GFX_goal_generic_soviet_construction
 		x = 9
@@ -78,6 +214,49 @@ focus_tree = {
 		prerequisite = { focus = SIC_election_neutrality }
 		completion_reward = {
 		} 
+	}
+	focus = {
+		id = SIC_albanian_claim
+		#icon = GFX_goal_generic_soviet_construction
+		x = 9
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_royal_guards }
+		completion_reward = {
+			44 = {
+				add_claim_by = SCI
+			}
+		}
+	}
+	focus = {
+		id = SIC_albanian_takeover
+		#icon = GFX_goal_generic_soviet_construction
+		x = 9
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_albanian_claim }
+		completion_reward = {
+			if = {
+				limit = {
+					threat < 0.5
+				}
+				puppet = ALB 
+			}
+			if = {
+				limit = {
+					threat > 0.5
+				}
+				annex_country = { target = ALB } 
+			}
+		}
 	}
 	focus = {
 		id = SIC_economic_liberalization
