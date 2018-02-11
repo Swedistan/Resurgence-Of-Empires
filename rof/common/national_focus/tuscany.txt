@@ -82,4 +82,56 @@ focus_tree = {
 			custom_effect_tooltip = TUS_companies_available
 		}
 	}
+	
+	focus = {
+		id = TUS_people_army
+		icon = GFX_focus_generic_little_entente
+		x = 5
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.75 uses = 1 category = land_doctrine }	
+		}
+	}
+	
+	focus = {
+		id = TUS_milind_workwith
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 5
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = TUS_people_army }
+		
+		completion_reward = {
+			army_experience = 10
+			162 = { add_extra_state_shared_building_slots = 1 }
+			162 = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+		}
+	}
+	
+	focus = {
+		id = TUS_rifle_design
+		icon = GFX_goal_generic_small_arms
+		x = 4
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = TUS_home_companies focus = TUS_milind_workwith }
+		
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = infantry_weapons }	
+		}
+	}
 }

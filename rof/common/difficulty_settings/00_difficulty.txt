@@ -1,0 +1,8 @@
+difficulty_settings = {
+	difficulty_setting = {
+		key = "custom_diff_strong_commies"
+		modifier = diff_strong_ai_generic
+		countries = { SOV BAV TUS }
+		multiplier = 2.0
+	}
+}
