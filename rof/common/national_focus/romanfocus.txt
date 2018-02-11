@@ -1,0 +1,13 @@
+focus_tree = {
+id = 'romanfocus'
+country = {
+factor=0
+modifier = {
+add = 10
+tag = Roman Empire
+}
+}
+default = no
+#Custom focuses start here
+#End of focuses 
+}
