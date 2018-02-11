@@ -43,10 +43,10 @@ set_convoys = 20
 
 create_country_leader = {
 	name = "Julius Caesar"
-	desc = "POLITICS_KING_ZOG_DESC"
+	#desc = "POLITICS_KING_ZOG_DESC"
 	#picture = "Portrait_Albania_King_Zog.dds"
 	expire = "1965.1.1"
-	ideology = despotism
+	ideology = fascism_ideology
 	traits = {
 		
 	}
