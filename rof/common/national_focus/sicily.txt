@@ -1,0 +1,478 @@
+focus_tree = {
+	id = sicily_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SCI
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 1100 }
+	
+	
+	
+	
+	#####
+	##Electoral Focus
+	#####
+	focus = {
+		id = SIC_election_1937
+		#icon = GFX_goal_generic_soviet_construction
+		x = 10
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1937.5.2
+		}
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	focus = {
+		id = SIC_election_democratic
+		#icon = GFX_goal_generic_soviet_construction
+		x = 5
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_election_1937 }
+		completion_reward = {
+			set_politics = { ruling_party = democratic elections_allowed = yes } 
+		}
+	}
+	focus = {
+		id = SIC_election_neutrality
+		#icon = GFX_goal_generic_soviet_construction
+		x = 9
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_election_1937 }
+		completion_reward = {
+			set_politics = { ruling_party = neutrality elections_allowed = yes } 
+		}
+	}
+	focus = {
+		id = SIC_royal_guards
+		#icon = GFX_goal_generic_soviet_construction
+		x = 9
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_election_neutrality }
+		completion_reward = {
+		} 
+	}
+	focus = {
+		id = SIC_economic_liberalization
+		#icon = GFX_goal_generic_soviet_construction
+		x = 7
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_election_neutrality focus = SIC_election_democratic }
+		completion_reward = {
+		} 
+	}
+	focus = {
+		id = SIC_election_communism
+		#icon = GFX_goal_generic_soviet_construction
+		x = 11
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_election_1937 }
+		completion_reward = {
+			set_politics = { ruling_party = communism elections_allowed = no } 
+		}
+	}
+	focus = {
+		id = SIC_envoy_tuscany
+		#icon = GFX_goal_generic_soviet_construction
+		x = 11
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			NOT = {
+				TUS = { has_government = communism } 
+			}
+		}
+		prerequisite = { focus = SIC_election_communism }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SIC_italian_confederation
+		#icon = GFX_goal_generic_soviet_construction
+		x = 11
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_envoy_tuscany }
+		completion_reward = {
+			create_faction = "italian_confederation" 
+		}
+	}
+	focus = {
+		id = SIC_italian_confederation_2
+		#icon = GFX_goal_generic_soviet_construction
+		x = 11
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_italian_confederation }
+		completion_reward = {
+		}
+	}
+	##Fascism
+	focus = {
+		id = SIC_election_fascism
+		#icon = GFX_goal_generic_soviet_construction
+		x = 15
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_election_1937 }
+		completion_reward = {
+			set_politics = { ruling_party = fascism elections_allowed = no } 
+		}
+	}
+	focus = {
+		id = SIC_show_of_force
+		#icon = GFX_goal_generic_soviet_construction
+		x = 15
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_election_fascism }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SIC_national_mobilisation
+		#icon = GFX_goal_generic_soviet_construction
+		x = 13
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_election_fascism focus = SIC_election_communism }
+		completion_reward = {
+			add_ideas = militarism_focus
+		}
+	}
+	#####
+	##Industry Focus
+	#####
+	##Industry
+	##Infrastructure
+	focus = {
+		id = SIC_public_broadcasting
+		#icon = GFX_goal_generic_soviet_construction
+		x = 18
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SIC_research_grants
+		#icon = GFX_goal_generic_soviet_construction
+		x = 17
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_public_broadcasting }
+		completion_reward = {
+			#add_research_slot = 1
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = industry } 
+		}
+	}
+	focus = {
+		id = SIC_popular_radio
+		#icon = GFX_goal_generic_soviet_construction
+		x = 19
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_public_broadcasting }
+		completion_reward = {
+			#add_research_slot = 1
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = electronics } 
+		}
+	}
+	focus = {
+		id = SIC_military_radio
+		#icon = GFX_goal_generic_soviet_construction
+		x = 19
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_popular_radio }
+		prerequisite = { focus = SIC_research_grants }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = electronics } 
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = radar_tech } 
+		}
+	}
+	focus = {
+		id = SIC_taranto_college
+		#icon = GFX_goal_generic_soviet_construction
+		x = 17
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_research_grants }
+		prerequisite = { focus = SIC_popular_radio }
+		completion_reward = {
+			156 = { add_extra_state_shared_building_slots = 1 }
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SIC_road_survey
+		#icon = GFX_goal_generic_soviet_construction
+		x = 22
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SIC_standardize_gauge
+		#icon = GFX_goal_generic_soviet_construction
+		x = 22
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_road_survey }
+		completion_reward = {
+			117 = {
+				remove_building = { type = infrastructure level = 2 }
+			}
+			156 = {
+				remove_building = { type = infrastructure level = 1 }
+			}
+			115 = {
+				remove_building = { type = infrastructure level = 1 }
+			}
+		}
+	}
+	focus = {
+		id = SIC_rebuild_railway_1
+		#icon = GFX_goal_generic_soviet_construction
+		x = 21
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_standardize_gauge }
+		completion_reward = {
+			115 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+		}
+	}
+	focus = {
+		id = SIC_rebuild_railway_2
+		#icon = GFX_goal_generic_soviet_construction
+		x = 23
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_standardize_gauge }
+		completion_reward = {
+			156 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			117 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+		}
+	}
+	#####
+	##Military
+	#####
+	##Airforce
+	focus = {
+		id = SIC_flag_carrier
+		#icon = GFX_goal_generic_soviet_construction
+		x = 26
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = air_doctrine } 
+			set_technology = { early_bomber = 1 } 
+			set_technology = { tactical_bomber1 = 1 } 
+		}
+	}
+	focus = {
+		id = SIC_pilot_school
+		#icon = GFX_goal_generic_soviet_construction
+		x = 26
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_flag_carrier }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = air_equipment } 
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = air_doctrine } 
+		}
+	}
+	##Navy
+	focus = {
+		id = SIC_naval_academy
+		#icon = GFX_goal_generic_soviet_construction
+		x = 30
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = naval_doctrine } 
+		}
+	}
+	focus = {
+		id = SIC_dockyard_construction
+		#icon = GFX_goal_generic_soviet_construction
+		x = 29
+		y = 1
+		cost = 20
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_naval_academy }
+		completion_reward = {
+			115 = {
+				add_extra_state_shared_building_slots  = 3
+				add_building_construction = { type = dockyard level = 3 instant_build = yes }
+			}
+		}
+	}
+	focus = {
+		id = SIC_naval_research_facility
+		#icon = GFX_goal_generic_soviet_construction
+		x = 31
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_naval_academy }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = 	cl_tech } 
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = 	ca_tech }  
+		}
+	}
+	focus = {
+		id = SIC_marine_training
+		#icon = GFX_goal_generic_soviet_construction
+		x = 32
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_naval_research_facility }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = 	marine_tech } 
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = 	tp_tech } 
+		}
+	}
+	focus = {
+		id = SIC_naval_airforce
+		#icon = GFX_goal_generic_soviet_construction
+		x = 28
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SIC_naval_research_facility }
+		prerequisite = { focus = SIC_pilot_school }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = 	naval_air } 
+		}
+	}
+}
