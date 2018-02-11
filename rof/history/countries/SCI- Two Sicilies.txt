@@ -12,7 +12,7 @@ set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 90
+			popularity = 74
 		}
 
 		fascism = {
@@ -24,29 +24,57 @@ set_politics = {
 		}
 		
 		neutrality = { 
-			popularity = 5
+			popularity = 25
 		}
 	}
 	
 	ruling_party = democratic
 	last_election = "1933.3.5"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 
 set_convoys = 20
 
-#Victor Emmanuel III of Italy after 39
-#create_country_leader = {
-#	name = "King Zog"
-#	desc = "POLITICS_KING_ZOG_DESC"
-#	picture = "Portrait_Albania_King_Zog.dds"
-#	expire = "1965.1.1"
-#	ideology = despotism
-#	traits = {
-		#
-#	}
-#}
+create_country_leader = {
+	name = "Luigi Sturzo"
+	#desc = "POLITICS_KING_ZOG_DESC"
+	picture = "Portrait_Luigi_Sturzo.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Michele Bianchi"
+	#desc = "POLITICS_KING_ZOG_DESC"
+	picture = "Portrait_Michele_Bianchi.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Amadeo Bordiga"
+	#desc = "POLITICS_KING_ZOG_DESC"
+	picture = "Portrait_Amadeo_Bordiga.dds"
+	expire = "1965.1.1"
+	ideology = marxism 
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Ferdinand Pius, Duke of Calabria"
+	#desc = "POLITICS_KING_ZOG_DESC"
+	picture = "Portrait_Ferdinand_Pius.dds"
+	expire = "1965.1.1"
+	ideology = despotism 
+	traits = {
+	}
+}
 
 #create_field_marshal = {
 #	name = "Xhemal Aranitasi"
