@@ -35,8 +35,8 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		text = "Establish The Legions"
 		prerequisite = { focus = RME_Found_Our_Nation }
-		x = 16
-		y = 3
+		x = 2
+		y = 2
 		cost = 10
 
 		available_if_capitulated = yes
