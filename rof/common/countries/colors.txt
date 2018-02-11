@@ -608,3 +608,7 @@ MOR = {
 	color = rgb { 227  221  134 }
 	color_ui = rgb { 122  122  74 }
 }
+SIB = {
+	color = rgb { 14  105  41 }
+	color_ui = rgb { 122  122  74 }
+}
