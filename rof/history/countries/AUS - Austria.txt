@@ -18,26 +18,26 @@ set_politics = {
 
 	parties = {
 		neutrality = { 
-			popularity = 48
+			popularity = 53
 		}
 
 		fascism = {
-			popularity = 50
+			popularity = 18
 		}
 
 		democratic = {
-			popularity = 1
+			popularity = 20
 		}
 		
 		communism = {
-			popularity = 1
+			popularity = 12
 		}
 	}
 	
 	ruling_party = neutrality
 	last_election = "1930.11.9"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 	
 set_autonomy = {
@@ -49,9 +49,7 @@ set_autonomy = {
 set_national_unity = 0.50
 
 create_country_leader = {
-	name = "Kurt Schuschnigg"
-	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
-	picture = "Portrait_Austria_Kurt_Schuschnigg.dds"
+	name = "Emperor Otto von Habsburg-Lothringen"
 	expire = "1965.1.1"
 	ideology = centrism
 	traits = {
@@ -71,9 +69,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Arthur Seyss-Inquart"
-	desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+	name = "Kurt Schuschnigg"
+	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+	picture = "Portrait_Austria_Kurt_Schuschnigg.dds"
 	expire = "1965.1.1"
 	ideology = nazism
 	traits = {

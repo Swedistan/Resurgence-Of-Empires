@@ -47,6 +47,39 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Ernst Thälmann"
+	#desc = "POLITICS_KING_ZOG_DESC"
+	#picture = "Portrait_Albania_King_Zog.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Konrad Adenauer"
+	#desc = "POLITICS_KING_ZOG_DESC"
+	#picture = "Portrait_Albania_King_Zog.dds"
+	expire = "1965.1.1"
+	ideology = conservativism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Alfred Hugenberg"
+	#desc = "POLITICS_KING_ZOG_DESC"
+	#picture = "Portrait_Albania_King_Zog.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		
+	}
+}
+
 #create_field_marshal = {
 #	name = "Xhemal Aranitasi"
 #	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
