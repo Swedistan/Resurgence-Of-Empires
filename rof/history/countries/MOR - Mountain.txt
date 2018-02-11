@@ -37,7 +37,7 @@ set_politics = {
 set_convoys = 20
 
 create_country_leader = {
-	name = "Friedrich Wilhelm III"
+	name = "Tapa Tchermoeff"
 	#desc = "POLITICS_KING_ZOG_DESC"
 	#picture = "Portrait_Albania_King_Zog.dds"
 	expire = "1965.1.1"
