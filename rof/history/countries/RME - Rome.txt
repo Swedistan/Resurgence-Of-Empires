@@ -41,21 +41,26 @@ set_politics = {
 
 set_convoys = 20
 
-#Victor Emmanuel III of Italy after 39
-#create_country_leader = {
-#	name = "King Zog"
-#	desc = "POLITICS_KING_ZOG_DESC"
-#	picture = "Portrait_Albania_King_Zog.dds"
-#	expire = "1965.1.1"
-#	ideology = despotism
-#	traits = {
-		#
-#	}
-#}
+create_country_leader = {
+	name = "Julius Caesar"
+	desc = "POLITICS_KING_ZOG_DESC"
+	#picture = "Portrait_Albania_King_Zog.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		
+	}
+}
 
-#create_field_marshal = {
-#	name = "Xhemal Aranitasi"
-#	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-#	skill = 2
-#}
+create_field_marshal = {
+	name = "Decius Publicius Laurentius"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	traits = { offensive_doctrine defensive_doctrine }
+	skill = 3
+}
+create_field_marshal = {
+	name = "Flavius Albatius Plautius"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	skill = 2
+}
 
