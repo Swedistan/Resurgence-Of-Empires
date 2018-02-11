@@ -48,6 +48,18 @@ set_convoys = 20
 #	}
 #}
 
+create_country_leader = {
+	name = "Luigi Einaudi"
+	#desc = "POLITICS_KING_ZOG_DESC"
+	#picture = "Portrait_Albania_King_Zog.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		
+	}
+}
+
+
 #create_field_marshal = {
 #	name = "Xhemal Aranitasi"
 #	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"

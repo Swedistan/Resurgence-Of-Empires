@@ -497,5 +497,47 @@
  #########
  SCI_neutrality_party:0 "Partito Monarchico Borbone"
  SCI_fascism_party:0 "Partito Fascista Italiano"
- SCI_democratic_party:0 "Partito Popolare Di Christo"
- SCI_communism_party:0 "Partito Comunista Di Sicilia"
+ SCI_democratic_party:0 "Partito Popolare di Christo"
+ SCI_communism_party:0 "Partito Comunista di Sicilia"
+ ##########
+ ##United Italian Duchies
+ #########
+ UID_neutrality_party:0 "Assemblea dei Duchi"
+ UID_fascism_party:0 "Partito Fascista Italiano"
+ UID_democratic_party:0 "Partito Populare degli Appennini"
+ UID_communism_party:0 "Partito di unità Socialista"
+ ##########
+ ##Milan
+ #########
+ MIL_neutrality_party:0 "Partito Monarchico"
+ MIL_fascism_party:0 "Partito Fascista Italiano"
+ MIL_democratic_party:0 "Partito Socialista"
+ MIL_communism_party:0 "Partito Sovietico di Milano"
+ ##########
+ ##Tuscany
+ #########
+ TUS_neutrality_party:0 "Partito Monarchico"
+ TUS_fascism_party:0 "Partito Fascista Italiano"
+ TUS_democratic_party:0 "Partito di Christo"
+ TUS_communism_party:0 "Partito Popolare Toscano"
+ ##########
+ ##Rome
+ #########
+ RME_neutrality_party:0 "Monarchici Italiani"
+ RME_fascism_party:0 "Partito dell'Imperatore"
+ RME_democratic_party:0 "Partito popolare Italiana"
+ RME_communism_party:0 "Partito Sovietico Romano"
+ ##########
+ ##Venice
+ #########
+ VNC_neutrality_party:0 "Partito Austriaco"
+ VNC_fascism_party:0 "Partito Fascista Italiano"
+ VNC_democratic_party:0 "Partito popolare dell'Veneto"
+ VNC_communism_party:0 "Partito Comunista Settentrionale"
+ ##########
+ ##Piedmont
+ #########
+ PIE_neutrality_party:0 "Partito Unità di Piemonte"
+ PIE_fascism_party:0 "Partito Fascista Italiano"
+ PIE_democratic_party:0 "Socialdemocratici del Piemonte"
+ PIE_communism_party:0 "Partito Leninista-Marxista"

@@ -48,6 +48,17 @@ set_convoys = 20
 #	}
 #}
 
+create_country_leader = {
+	name = "Gino Cassinis"
+	#desc = "POLITICS_KING_ZOG_DESC"
+	picture = "Portrait_Gino_Cassinis.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		
+	}
+}
+
 #create_field_marshal = {
 #	name = "Xhemal Aranitasi"
 #	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
