@@ -1,6 +1,6 @@
 ideas = {
 	country = {
-		SIC_domestic_focus = {
+		SCI_domestic_focus = {
 			allowed = {
 				original_tag = SIC
 			}
@@ -16,7 +16,7 @@ ideas = {
 				local_resources_factor = 0.05			
 			}
 		}
-		SIC_economic_liberalization = {
+		SCI_economic_liberalization = {
 			allowed = {
 				original_tag = SIC
 			}

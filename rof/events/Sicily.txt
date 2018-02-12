@@ -102,7 +102,45 @@ country_event = {
 	}
 	option = { #decline
 		name = Sicily.5.b
-		SIC = {
+		SCI = {
 		}
+	}
+}
+# Show of force
+country_event = {
+	id = Sicily.5
+	title = Sicily.5.t
+	desc = Sicily.5.d
+	is_triggered_only = yes
+	option = { #accept
+		name = Sicily.5.a
+		SCI = {
+			add_to_faction = TUS
+		}
+		add_threat = 2 
+		news_event = { id = news.1000 days = 1 }
+	}
+	option = { #decline
+		name = Sicily.5.b
+		SCI = {
+		}
+	}
+}
+# Sicily demands allegiance
+country_event = {
+	id = Sicily.6
+	title = Sicily.6.t
+	desc = Sicily.6.d
+	is_triggered_only = yes
+	option = { #accept
+		name = Sicily.6.a
+		SCI = {
+			annex_country = { target = ROOT } 
+		}
+		add_threat = 2 
+	}
+	option = { #decline
+		name = Sicily.6.b
+		 declare_war_on = { target = SCI type = topple_government } 
 	}
 }

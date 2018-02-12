@@ -19,7 +19,7 @@ focus_tree = {
 	##Electoral Focus
 	#####
 	focus = {
-		id = SIC_election_1937
+		id = SCI_election_1937
 		#icon = GFX_goal_generic_soviet_construction
 		x = 10
 		y = 0
@@ -36,7 +36,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SIC_election_democratic
+		id = SCI_election_democratic
 		#icon = GFX_goal_generic_soviet_construction
 		x = 5
 		y = 1
@@ -45,13 +45,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_election_1937 }
+		prerequisite = { focus = SCI_election_1937 }
 		completion_reward = {
 			set_politics = { ruling_party = democratic elections_allowed = yes } 
 		}
 	}
 	focus = {
-		id = SIC_bulwark_of_democracy
+		id = SCI_bulwark_of_democracy
 		#icon = GFX_goal_generic_soviet_construction
 		x = 3
 		y = 2
@@ -60,14 +60,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		mutually_exclusive  = { focus = SIC_political_isolation }
-		prerequisite = { focus = SIC_bulwark_of_democracy }
+		mutually_exclusive  = { focus = SCI_political_isolation }
+		prerequisite = { focus = SCI_bulwark_of_democracy }
 		completion_reward = {
 			set_rule = { can_send_volunteers = yes }
 		}
 	}
 	focus = {
-		id = SIC_united_duchies_democracy
+		id = SCI_united_duchies_democracy
 		#icon = GFX_goal_generic_soviet_construction
 		x = 3
 		y = 3
@@ -87,13 +87,13 @@ focus_tree = {
 				UID = { exists = no } 
 			}
 		}
-		prerequisite = { focus = SIC_election_democratic }
+		prerequisite = { focus = SCI_election_democratic }
 		completion_reward = {
 			create_wargoal = { type = topple_government target = UID } 
 		}
 	}
 	focus = {
-		id = SIC_political_isolation
+		id = SCI_political_isolation
 		#icon = GFX_goal_generic_soviet_construction
 		x = 5
 		y = 2
@@ -102,18 +102,18 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		mutually_exclusive  = { focus = SIC_bulwark_of_democracy }
-		prerequisite = { focus = SIC_election_democratic }
+		mutually_exclusive  = { focus = SCI_bulwark_of_democracy }
+		prerequisite = { focus = SCI_election_democratic }
 		completion_reward = {
 			add_ideas = deterrence
-			add_ideas = SIC_domestic_focus
+			add_ideas = SCI_domestic_focus
 			every_owned_state = {
 				add_extra_state_shared_building_slots = 1
 			}
 		}
 	}
 	focus = {
-		id = SIC_wake_up
+		id = SCI_wake_up
 		#icon = GFX_goal_generic_soviet_construction
 		x = 5
 		y = 3
@@ -125,14 +125,14 @@ focus_tree = {
 		available = {
 			threat > 0.5
 		}
-		prerequisite = { focus = SIC_political_isolation }
+		prerequisite = { focus = SCI_political_isolation }
 		completion_reward = {
 			remove_ideas = deterrence
-			remove_ideas = SIC_domestic_focus
+			remove_ideas = SCI_domestic_focus
 		}
 	}
 	focus = {
-		id = SIC_italian_democracy
+		id = SCI_italian_democracy
 		#icon = GFX_goal_generic_soviet_construction
 		x = 4
 		y = 4
@@ -144,7 +144,7 @@ focus_tree = {
 		available = {
 			threat > 0.5
 		}
-		prerequisite = { focus = SIC_wake_up focus = SIC_united_duchies_democracy }
+		prerequisite = { focus = SCI_wake_up focus = SCI_united_duchies_democracy }
 		completion_reward = {
 			create_faction = "Italian_Union"
 			if = {
@@ -158,7 +158,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SIC_italian_democracy_milan
+		id = SCI_italian_democracy_milan
 		#icon = GFX_goal_generic_soviet_construction
 		x = 3
 		y = 5
@@ -174,13 +174,13 @@ focus_tree = {
 				is_subject = no
 			}
 		}
-		prerequisite = { focus = SIC_italian_democracy }
+		prerequisite = { focus = SCI_italian_democracy }
 		completion_reward = {
 			add_to_faction = MIL
 		}
 	}
 	focus = {
-		id = SIC_italian_democracy_venice
+		id = SCI_italian_democracy_venice
 		#icon = GFX_goal_generic_soviet_construction
 		x = 5
 		y = 5
@@ -196,13 +196,13 @@ focus_tree = {
 				is_subject = no
 			}
 		}
-		prerequisite = { focus = SIC_italian_democracy }
+		prerequisite = { focus = SCI_italian_democracy }
 		completion_reward = {
 			add_to_faction = VNC
 		}
 	}
 	focus = {
-		id = SIC_election_neutrality
+		id = SCI_election_neutrality
 		#icon = GFX_goal_generic_soviet_construction
 		x = 9
 		y = 1
@@ -211,13 +211,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_election_1937 }
+		prerequisite = { focus = SCI_election_1937 }
 		completion_reward = {
 			set_politics = { ruling_party = neutrality elections_allowed = yes } 
 		}
 	}
 	focus = {
-		id = SIC_royal_guards
+		id = SCI_royal_guards
 		#icon = GFX_goal_generic_soviet_construction
 		x = 9
 		y = 2
@@ -226,12 +226,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_election_neutrality }
+		prerequisite = { focus = SCI_election_neutrality }
 		completion_reward = {
 		} 
 	}
 	focus = {
-		id = SIC_albanian_claim
+		id = SCI_albanian_claim
 		#icon = GFX_goal_generic_soviet_construction
 		x = 9
 		y = 3
@@ -240,7 +240,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_royal_guards }
+		prerequisite = { focus = SCI_royal_guards }
 		completion_reward = {
 			44 = {
 				add_claim_by = SCI
@@ -248,7 +248,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SIC_albanian_takeover
+		id = SCI_albanian_takeover
 		#icon = GFX_goal_generic_soviet_construction
 		x = 9
 		y = 4
@@ -257,7 +257,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_albanian_claim }
+		prerequisite = { focus = SCI_albanian_claim }
 		completion_reward = {
 			if = {
 				limit = {
@@ -278,7 +278,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SIC_economic_liberalization
+		id = SCI_economic_liberalization
 		#icon = GFX_goal_generic_soviet_construction
 		x = 7
 		y = 2
@@ -287,13 +287,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_election_neutrality focus = SIC_election_democratic }
+		prerequisite = { focus = SCI_election_neutrality focus = SCI_election_democratic }
 		completion_reward = {
-			add_ideas = SIC_economic_liberalization
+			add_ideas = SCI_economic_liberalization
 		} 
 	}
 	focus = {
-		id = SIC_election_communism
+		id = SCI_election_communism
 		#icon = GFX_goal_generic_soviet_construction
 		x = 11
 		y = 1
@@ -302,13 +302,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_election_1937 }
+		prerequisite = { focus = SCI_election_1937 }
 		completion_reward = {
 			set_politics = { ruling_party = communism elections_allowed = no } 
 		}
 	}
 	focus = {
-		id = SIC_envoy_tuscany
+		id = SCI_envoy_tuscany
 		#icon = GFX_goal_generic_soviet_construction
 		x = 11
 		y = 2
@@ -322,7 +322,7 @@ focus_tree = {
 				TUS = { has_government = communism } 
 			}
 		}
-		prerequisite = { focus = SIC_election_communism }
+		prerequisite = { focus = SCI_election_communism }
 		completion_reward = {
 			add_opinion_modifier = { target = TUS modifier = offered_support }
 			TUS = {
@@ -331,7 +331,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SIC_italian_confederation
+		id = SCI_italian_confederation
 		#icon = GFX_goal_generic_soviet_construction
 		x = 11
 		y = 3
@@ -340,13 +340,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_envoy_tuscany }
+		prerequisite = { focus = SCI_envoy_tuscany }
 		completion_reward = {
 			create_faction = "italian_confederation" 
 		}
 	}
 	focus = {
-		id = SIC_italian_confederation_2
+		id = SCI_italian_confederation_2
 		#icon = GFX_goal_generic_soviet_construction
 		x = 11
 		y = 4
@@ -355,13 +355,21 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_italian_confederation }
+		available = {
+			TUS = {
+				has_government = communism
+			}
+		}
+		prerequisite = { focus = SCI_italian_confederation }
 		completion_reward = {
+			TUS = {
+				country_event = { days = 1 id = Sicily.5 }
+			}
 		}
 	}
 	##Fascism
 	focus = {
-		id = SIC_election_fascism
+		id = SCI_election_fascism
 		#icon = GFX_goal_generic_soviet_construction
 		x = 15
 		y = 1
@@ -370,13 +378,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_election_1937 }
+		prerequisite = { focus = SCI_election_1937 }
 		completion_reward = {
 			set_politics = { ruling_party = fascism elections_allowed = no } 
 		}
 	}
 	focus = {
-		id = SIC_show_of_force
+		id = SCI_show_of_force
 		#icon = GFX_goal_generic_soviet_construction
 		x = 15
 		y = 2
@@ -385,12 +393,205 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_election_fascism }
+		prerequisite = { focus = SCI_election_fascism }
 		completion_reward = {
+			add_threat = 2 
+			add_political_power = 50
 		}
 	}
 	focus = {
-		id = SIC_national_mobilisation
+		id = SCI_italian_claims
+		#icon = GFX_goal_generic_soviet_construction
+		x = 15
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_show_of_force }
+		completion_reward = {
+			add_threat = 2 
+			hidden_effect = {
+			every_state = {
+				limit = {
+					region = 23
+					NOT = {
+						is_core_of = ROOT
+					}
+				}
+				add_claim_by = ROOT
+			} 
+			add_state_claim = 735 
+			add_state_claim = 158 
+			add_state_claim = 159 
+			add_state_claim = 160 
+			add_state_claim = 736 
+			add_state_claim = 163
+			add_state_claim = 114
+			add_state_claim = 1
+		}
+		}
+	}
+	focus = {
+		id = SCI_march_on_rome
+		#icon = GFX_goal_generic_soviet_construction
+		x = 15
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_italian_claims }
+		completion_reward = {
+			add_state_core = 2
+			create_wargoal = { type = annex_everything target = RME } 
+		}
+	}
+	focus = {
+		id = SCI_northern_allegiance
+		#icon = GFX_goal_generic_soviet_construction
+		x = 14
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			ROOT = {
+				controls_state = 2
+			}
+		}
+		prerequisite = { focus = SCI_march_on_rome }
+		completion_reward = {
+			if = {
+				limit = {
+					PIE = {
+						OR = {
+							has_government = democratic
+							has_government = neutrality
+							has_government = fascism
+						}
+					}
+				}
+				country_event = { days = 1 id = Sicily.6 } 
+			}
+			if = {
+				limit = {
+					MIL = {
+						OR = {
+							has_government = democratic
+							has_government = neutrality
+							has_government = fascism
+						}
+					}
+				}
+				country_event = { days = 1 id = Sicily.6 } 
+			}
+			if = {
+				limit = {
+					UID = {
+						OR = {
+							has_government = democratic
+							has_government = neutrality
+							has_government = fascism
+						}
+					}
+				}
+				country_event = { days = 1 id = Sicily.6 } 
+			}
+			if = {
+				limit = {
+					VNC = {
+						OR = {
+							has_government = democratic
+							has_government = neutrality
+							has_government = fascism
+						}
+					}
+				}
+				country_event = { days = 1 id = Sicily.6 } 
+			}
+			if = {
+				limit = {
+					TUS = {
+						OR = {
+							has_government = democratic
+							has_government = neutrality
+							has_government = fascism
+						}
+					}
+				}
+				country_event = { days = 1 id = Sicily.6 } 
+			}
+		}
+	}
+	focus = {
+		id = SCI_ideological_struggle
+		#icon = GFX_goal_generic_soviet_construction
+		x = 16
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_march_on_rome }
+		completion_reward = {
+			if = {
+				limit = {
+					PIE = {
+						OR = {
+							has_government = communism
+						}
+					}
+				}
+				create_wargoal = { type = annex_everything target = PIE } 
+			}
+			if = {
+				limit = {
+					MIL = {
+						has_government = communism
+					}
+				}
+				create_wargoal = { type = annex_everything target = MIL } 
+			}
+			if = {
+				limit = {
+					UID = {
+						OR = {
+							has_government = communism
+						}
+					}
+				}
+				create_wargoal = { type = annex_everything target = UID } 
+			}
+			if = {
+				limit = {
+					VNC = {
+						OR = {
+							has_government = communism
+						}
+					}
+				}
+				create_wargoal = { type = annex_everything target = VNC } 
+			}
+			if = {
+				limit = {
+					TUS = {
+						OR = {
+							has_government = communism
+						}
+					}
+				}
+				create_wargoal = { type = annex_everything target = TUS } 
+			}
+		}
+	}
+	focus = {
+		id = SCI_national_mobilisation
 		#icon = GFX_goal_generic_soviet_construction
 		x = 13
 		y = 2
@@ -399,7 +600,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_election_fascism focus = SIC_election_communism }
+		prerequisite = { focus = SCI_election_fascism focus = SCI_election_communism }
 		completion_reward = {
 			add_ideas = militarism_focus
 		}
@@ -410,7 +611,7 @@ focus_tree = {
 	##Industry
 	##Infrastructure
 	focus = {
-		id = SIC_public_broadcasting
+		id = SCI_public_broadcasting
 		#icon = GFX_goal_generic_soviet_construction
 		x = 18
 		y = 0
@@ -423,7 +624,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SIC_research_grants
+		id = SCI_research_grants
 		#icon = GFX_goal_generic_soviet_construction
 		x = 17
 		y = 1
@@ -432,14 +633,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_public_broadcasting }
+		prerequisite = { focus = SCI_public_broadcasting }
 		completion_reward = {
 			#add_research_slot = 1
 			add_tech_bonus = { bonus = 0.5 uses = 2 category = industry } 
 		}
 	}
 	focus = {
-		id = SIC_popular_radio
+		id = SCI_popular_radio
 		#icon = GFX_goal_generic_soviet_construction
 		x = 19
 		y = 1
@@ -448,14 +649,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_public_broadcasting }
+		prerequisite = { focus = SCI_public_broadcasting }
 		completion_reward = {
 			#add_research_slot = 1
 			add_tech_bonus = { bonus = 0.5 uses = 2 category = electronics } 
 		}
 	}
 	focus = {
-		id = SIC_military_radio
+		id = SCI_military_radio
 		#icon = GFX_goal_generic_soviet_construction
 		x = 19
 		y = 2
@@ -464,15 +665,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_popular_radio }
-		prerequisite = { focus = SIC_research_grants }
+		prerequisite = { focus = SCI_popular_radio }
+		prerequisite = { focus = SCI_research_grants }
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = electronics } 
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = radar_tech } 
 		}
 	}
 	focus = {
-		id = SIC_taranto_college
+		id = SCI_taranto_college
 		#icon = GFX_goal_generic_soviet_construction
 		x = 17
 		y = 2
@@ -481,15 +682,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_research_grants }
-		prerequisite = { focus = SIC_popular_radio }
+		prerequisite = { focus = SCI_research_grants }
+		prerequisite = { focus = SCI_popular_radio }
 		completion_reward = {
 			156 = { add_extra_state_shared_building_slots = 1 }
 			add_research_slot = 1
 		}
 	}
 	focus = {
-		id = SIC_road_survey
+		id = SCI_road_survey
 		#icon = GFX_goal_generic_soviet_construction
 		x = 22
 		y = 0
@@ -502,7 +703,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SIC_standardize_gauge
+		id = SCI_standardize_gauge
 		#icon = GFX_goal_generic_soviet_construction
 		x = 22
 		y = 1
@@ -511,7 +712,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_road_survey }
+		prerequisite = { focus = SCI_road_survey }
 		completion_reward = {
 			117 = {
 				remove_building = { type = infrastructure level = 2 }
@@ -525,7 +726,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SIC_rebuild_railway_1
+		id = SCI_rebuild_railway_1
 		#icon = GFX_goal_generic_soviet_construction
 		x = 21
 		y = 2
@@ -534,7 +735,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_standardize_gauge }
+		prerequisite = { focus = SCI_standardize_gauge }
 		completion_reward = {
 			115 = {
 				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
@@ -542,7 +743,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SIC_rebuild_railway_2
+		id = SCI_rebuild_railway_2
 		#icon = GFX_goal_generic_soviet_construction
 		x = 23
 		y = 2
@@ -551,7 +752,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_standardize_gauge }
+		prerequisite = { focus = SCI_standardize_gauge }
 		completion_reward = {
 			156 = {
 				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
@@ -562,7 +763,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SIC_state_owned_enterprises
+		id = SCI_state_owned_enterprises
 		#icon = GFX_goal_generic_soviet_construction
 		x = 24
 		y = 0
@@ -579,7 +780,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SIC_military_industrial_complex
+		id = SCI_military_industrial_complex
 		#icon = GFX_goal_generic_soviet_construction
 		x = 24
 		y = 1
@@ -588,7 +789,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_state_owned_enterprises }
+		prerequisite = { focus = SCI_state_owned_enterprises }
 		completion_reward = {
 			156 = {
 				add_extra_state_shared_building_slots = 2
@@ -597,7 +798,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SIC_regional_planning
+		id = SCI_regional_planning
 		#icon = GFX_goal_generic_soviet_construction
 		x = 24
 		y = 3
@@ -606,8 +807,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_military_industrial_complex }
-		prerequisite = { focus = SIC_rebuild_railway_2 }
+		prerequisite = { focus = SCI_military_industrial_complex }
+		prerequisite = { focus = SCI_rebuild_railway_2 }
 		completion_reward = {
 			every_owned_state = {
 				add_extra_state_shared_building_slots = 2
@@ -619,7 +820,7 @@ focus_tree = {
 	#####
 	##Airforce
 	focus = {
-		id = SIC_flag_carrier
+		id = SCI_flag_carrier
 		#icon = GFX_goal_generic_soviet_construction
 		x = 26
 		y = 0
@@ -635,7 +836,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SIC_pilot_school
+		id = SCI_pilot_school
 		#icon = GFX_goal_generic_soviet_construction
 		x = 26
 		y = 1
@@ -644,7 +845,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_flag_carrier }
+		prerequisite = { focus = SCI_flag_carrier }
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = air_equipment } 
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = air_doctrine } 
@@ -652,7 +853,7 @@ focus_tree = {
 	}
 	##Navy
 	focus = {
-		id = SIC_naval_academy
+		id = SCI_naval_academy
 		#icon = GFX_goal_generic_soviet_construction
 		x = 30
 		y = 0
@@ -666,7 +867,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SIC_dockyard_construction
+		id = SCI_dockyard_construction
 		#icon = GFX_goal_generic_soviet_construction
 		x = 29
 		y = 1
@@ -675,7 +876,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_naval_academy }
+		prerequisite = { focus = SCI_naval_academy }
 		completion_reward = {
 			115 = {
 				add_extra_state_shared_building_slots  = 3
@@ -684,7 +885,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SIC_naval_research_facility
+		id = SCI_naval_research_facility
 		#icon = GFX_goal_generic_soviet_construction
 		x = 31
 		y = 1
@@ -693,14 +894,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_naval_academy }
+		prerequisite = { focus = SCI_naval_academy }
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = 	cl_tech } 
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = 	ca_tech }  
 		}
 	}
 	focus = {
-		id = SIC_marine_training
+		id = SCI_marine_training
 		#icon = GFX_goal_generic_soviet_construction
 		x = 32
 		y = 2
@@ -709,14 +910,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_naval_research_facility }
+		prerequisite = { focus = SCI_naval_research_facility }
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = 	marine_tech } 
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = 	tp_tech } 
 		}
 	}
 	focus = {
-		id = SIC_naval_airforce
+		id = SCI_naval_airforce
 		#icon = GFX_goal_generic_soviet_construction
 		x = 28
 		y = 2
@@ -725,8 +926,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = { focus = SIC_naval_research_facility }
-		prerequisite = { focus = SIC_pilot_school }
+		prerequisite = { focus = SCI_naval_research_facility }
+		prerequisite = { focus = SCI_pilot_school }
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = 	naval_air } 
 		}
