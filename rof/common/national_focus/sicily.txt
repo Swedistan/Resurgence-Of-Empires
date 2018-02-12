@@ -23,7 +23,7 @@ focus_tree = {
 		#icon = GFX_goal_generic_soviet_construction
 		x = 10
 		y = 0
-		cost = 10
+		cost = 1
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -45,9 +45,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		mutually_exclusive  = { focus = SCI_election_fascism focus = SCI_election_communism focus = SCI_election_neutrality }
 		prerequisite = { focus = SCI_election_1937 }
 		completion_reward = {
-			set_politics = { ruling_party = democratic elections_allowed = yes } 
+			set_politics = { ruling_party = democratic elections_allowed = no } 
 		}
 	}
 	focus = {
@@ -61,7 +62,7 @@ focus_tree = {
 			factor = 1
 		}
 		mutually_exclusive  = { focus = SCI_political_isolation }
-		prerequisite = { focus = SCI_bulwark_of_democracy }
+		prerequisite = { focus = SCI_election_democratic }
 		completion_reward = {
 			set_rule = { can_send_volunteers = yes }
 		}
@@ -212,8 +213,9 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = SCI_election_1937 }
+		mutually_exclusive  = { focus = SCI_election_fascism focus = SCI_election_communism focus = SCI_election_democratic }
 		completion_reward = {
-			set_politics = { ruling_party = neutrality elections_allowed = yes } 
+			set_politics = { ruling_party = neutrality elections_allowed = no } 
 		}
 	}
 	focus = {
@@ -303,6 +305,7 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = SCI_election_1937 }
+		mutually_exclusive  = { focus = SCI_election_fascism focus = SCI_election_democratic focus = SCI_election_neutrality }
 		completion_reward = {
 			set_politics = { ruling_party = communism elections_allowed = no } 
 		}
@@ -379,6 +382,7 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = SCI_election_1937 }
+		mutually_exclusive  = { focus = SCI_election_communism focus = SCI_election_democratic focus = SCI_election_neutrality }
 		completion_reward = {
 			set_politics = { ruling_party = fascism elections_allowed = no } 
 		}
@@ -635,6 +639,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+			add_ideas = SCI_public_broadcast
 		}
 	}
 	focus = {
@@ -944,6 +949,115 @@ focus_tree = {
 		prerequisite = { focus = SCI_pilot_school }
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = 	naval_air } 
+		}
+	}
+	focus = {
+		id = SCI_election_1942
+		#icon = GFX_goal_generic_soviet_construction
+		x = 1
+		y = 0
+		cost = 1
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1942.5.2
+			OR = {
+				has_government = neutrality
+				has_government = democratic
+			}
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SCI_election_1942_democratic
+		#icon = GFX_goal_generic_soviet_construction
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_election_1942 }
+		mutually_exclusive = { focus = SCI_election_1942_neutrality}
+		completion_reward = {
+			add_political_power = 50
+			set_politics = { ruling_party = democratic elections_allowed = no } 
+		}
+	}
+	focus = {
+		id = SCI_election_1942_neutrality
+		#icon = GFX_goal_generic_soviet_construction
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_election_1942 }
+		mutually_exclusive = { focus = SCI_election_1942_democratic}
+		completion_reward = {
+			add_political_power = 50
+			set_politics = { ruling_party = neutrality elections_allowed = no } 
+		}
+	}
+	focus = {
+		id = SCI_election_1947
+		#icon = GFX_goal_generic_soviet_construction
+		x = 1
+		y = 3
+		cost = 1
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1947.5.2
+			OR = {
+				has_government = neutrality
+				has_government = democratic
+			}
+		}
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	focus = {
+		id = SCI_election_1947_democratic
+		#icon = GFX_goal_generic_soviet_construction
+		x = 0
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_election_1947 }
+		mutually_exclusive = { focus = SCI_election_1947_neutrality}
+		completion_reward = {
+			add_political_power = 50
+			set_politics = { ruling_party = democratic elections_allowed = yes } 
+		}
+	}
+	focus = {
+		id = SCI_election_1947_neutrality
+		#icon = GFX_goal_generic_soviet_construction
+		x = 2
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_election_1947 }
+		mutually_exclusive = { focus = SCI_election_1947_democratic}
+		completion_reward = {
+			add_political_power = 50
+			set_politics = { ruling_party = neutrality elections_allowed = yes } 
 		}
 	}
 }

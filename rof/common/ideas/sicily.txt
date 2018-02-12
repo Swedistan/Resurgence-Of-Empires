@@ -27,5 +27,16 @@ ideas = {
 				production_speed_buildings_factor = 0.1	
 			}
 		}
+		SCI_public_broadcast = {
+			allowed = {
+				original_tag = SCI
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				unity_factor = 0.05
+			}
+		}
 	}
 }
