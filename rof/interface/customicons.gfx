@@ -3,4 +3,12 @@ spriteTypes = {
 		name = "GFX_focus_goal_sicily_albania"
 		texturefile = "gfx/interface/goals/sicily/goal_sicily_albania.dds"
 	}
+	SpriteType = { 
+		name = "GFX_focus_goal_sicily_rome"
+		texturefile = "gfx/interface/goals/sicily/goal_sicily_rome.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_goal_ideological_struggle"
+		texturefile = "gfx/interface/goals/sicily/goal_ideological_struggle.dds"
+	}
  }

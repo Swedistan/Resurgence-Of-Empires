@@ -439,7 +439,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_march_on_rome
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_focus_goal_sicily_rome
 		x = 15
 		y = 4
 		cost = 10
@@ -548,7 +548,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_ideological_struggle
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_focus_goal_ideological_struggle
 		x = 16
 		y = 5
 		cost = 10
