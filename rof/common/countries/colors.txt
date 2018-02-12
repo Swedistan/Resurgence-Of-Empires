@@ -545,7 +545,7 @@ VNC = {
 	color = rgb { 65  198  196 }
 	color_ui = rgb { 65  198  196 }
 }
-MIL = {
+MLA = {
 	color = rgb { 216  97  202 }
 	color_ui = rgb { 216  97  202 }
 }

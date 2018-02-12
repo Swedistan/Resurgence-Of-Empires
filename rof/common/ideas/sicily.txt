@@ -2,12 +2,10 @@ ideas = {
 	country = {
 		SCI_domestic_focus = {
 			allowed = {
-				original_tag = SIC
+				original_tag = SCI
 			}
 			
 			removal_cost = -1
-			
-			picture = FRA_national_mobilization_focus
 			
 			modifier = {
 				consumer_goods_factor = 0.05 
@@ -18,12 +16,10 @@ ideas = {
 		}
 		SCI_economic_liberalization = {
 			allowed = {
-				original_tag = SIC
+				original_tag = SCI
 			}
 			
 			removal_cost = -1
-			
-			picture = FRA_national_mobilization_focus
 			
 			modifier = {
 				consumer_goods_factor = 0.02 

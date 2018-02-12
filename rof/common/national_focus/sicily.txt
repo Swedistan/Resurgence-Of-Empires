@@ -474,21 +474,27 @@ focus_tree = {
 							has_government = neutrality
 							has_government = fascism
 						}
+						is_subject = no
 					}
 				}
-				country_event = { days = 1 id = Sicily.6 } 
+				PIE = {
+					country_event = { days = 1 id = Sicily.6 } 
+				}
 			}
 			if = {
 				limit = {
-					MIL = {
+					MLA = {
 						OR = {
 							has_government = democratic
 							has_government = neutrality
 							has_government = fascism
 						}
+						is_subject = no
 					}
 				}
-				country_event = { days = 1 id = Sicily.6 } 
+				MLA = {
+					country_event = { days = 1 id = Sicily.6 } 
+				}
 			}
 			if = {
 				limit = {
@@ -498,9 +504,12 @@ focus_tree = {
 							has_government = neutrality
 							has_government = fascism
 						}
+						is_subject = no
 					}
 				}
-				country_event = { days = 1 id = Sicily.6 } 
+				UID = {
+					country_event = { days = 1 id = Sicily.6 } 
+				}
 			}
 			if = {
 				limit = {
@@ -510,9 +519,12 @@ focus_tree = {
 							has_government = neutrality
 							has_government = fascism
 						}
+						is_subject = no
 					}
 				}
-				country_event = { days = 1 id = Sicily.6 } 
+				VNC = {
+					country_event = { days = 1 id = Sicily.6 } 
+				}
 			}
 			if = {
 				limit = {
@@ -522,10 +534,12 @@ focus_tree = {
 							has_government = neutrality
 							has_government = fascism
 						}
+						is_subject = no
 					}
 				}
-				country_event = { days = 1 id = Sicily.6 } 
-			}
+				TUS = {
+					country_event = { days = 1 id = Sicily.6 } 
+				}			}
 		}
 	}
 	focus = {
@@ -552,11 +566,11 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					MIL = {
+					MLA = {
 						has_government = communism
 					}
 				}
-				create_wargoal = { type = annex_everything target = MIL } 
+				create_wargoal = { type = annex_everything target = MLA } 
 			}
 			if = {
 				limit = {
