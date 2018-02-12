@@ -44,7 +44,7 @@ ideas = {
 			
 		designer = yes
 		
-		SCI_materiel_man1 = {
+		SCI_material_man1 = {
 			
 			picture = generic_infantry_equipment_manufacturer_1
 
@@ -62,6 +62,143 @@ ideas = {
 			
 			traits = { TUS_infantry_equipment_manufacturer }
 
+		}
+	}
+	political_advisor = {
+		SCI_democratic_reformer = {
+			allowed = {
+				original_tag = SCI
+			}
+			available = {
+				has_completed_focus = SCI_election_democratic
+			}
+			picture = generic_political_advisor_europe_1
+			traits = { democratic_reformer }
+			do_effect = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		SCI_neutrality_reformer = {
+			allowed = {
+				original_tag = SCI
+			}
+			available = {
+				has_completed_focus = SCI_election_neutrality
+			}
+			picture = generic_political_advisor_europe_1
+			traits = { staunch_monarchist }
+			do_effect = {
+				NOT = {
+					has_government = neutrality
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		SCI_fascist_reformer = {
+			allowed = {
+				original_tag = SCI
+			}
+			available = {
+				has_completed_focus = SCI_election_fascism
+			}
+			picture = generic_political_advisor_europe_2
+			traits = { fascist_demagogue }
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		SCI_communist_reformer = {
+			allowed = {
+				original_tag = SCI
+			}
+			available = {
+				has_completed_focus = SCI_election_communism
+			}
+			picture = generic_political_advisor_europe_3
+			traits = { communist_revolutionary }
+			do_effect = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	theorist = {
+		SCI_giacomo_baristo = {
+		picture = generic_army_europe_1			
+		allowed = {
+			original_tag = SCI
+		}
+		research_bonus = {
+			land_doctrine = 0.03
+			naval_doctrine = 0.03
+		}
+		traits = { military_theorist }
+		}
+	}
+	army_chief = {
+		SCI_edoardo_antonelli = {
+			picture = generic_army_europe_2
+			allowed = {
+				original_tag = SCI
+			}
+			traits = { army_chief_drill_1 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	air_chief = {
+		SCI_benito_frigo = {
+			picture = generic_air_europe_2
+			allowed = {
+				original_tag = SCI
+			}
+			traits = { air_chief_all_weather_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	navy_chief = {
+		SCI_alfonso_russo = {	
+			picture = generic_navy_europe_1	
+			allowed = {
+				original_tag = SCI
+			}
+			traits = { navy_chief_decisive_battle_3 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	high_command = {
+		SCI_gianni_masini = {
+			allowed = {
+				original_tag = SCI
+			}	
+			picture = generic_army_europe_1
+			traits = { army_commando_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
 		}
 	}
 }

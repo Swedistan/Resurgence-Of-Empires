@@ -141,3 +141,8 @@
  SCI_public_broadcast:0 "Public Broadcasts"
  SCI_public_broadcast_desc:0 ""
  SCI_material_man1:0 "Napoli Weapons Manufacturing Co."
+ #Advisors/Military Staff
+ SCI_giacomo_baristo:0 "Giacomo Baristo"
+ SCI_benito_frigo:0 "Benito Frigo"
+ SCI_alfonso_russo:0 "Alfonso Russo"
+ SCI_gianni_masini:0 "Gianni Masini"
