@@ -86,3 +86,23 @@ country_event = {
 		add_political_power = -50
 	}
 }
+# Invited Tuscany
+country_event = {
+	id = Sicily.5
+	title = Sicily.5.t
+	desc = Sicily.5.d
+	is_triggered_only = yes
+	option = { #accept
+		name = Sicily.5.a
+		SCI = {
+			add_to_faction = TUS
+		}
+		add_threat = 2 
+		news_event = { id = news.1000 days = 1 }
+	}
+	option = { #decline
+		name = Sicily.5.b
+		SIC = {
+		}
+	}
+}

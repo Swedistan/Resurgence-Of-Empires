@@ -1,0 +1,35 @@
+ideas = {
+	country = {
+		SIC_domestic_focus = {
+			allowed = {
+				original_tag = SIC
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_national_mobilization_focus
+			
+			modifier = {
+				consumer_goods_factor = 0.05 
+				min_export = -0.05
+				production_speed_buildings_factor = 0.2
+				local_resources_factor = 0.05			
+			}
+		}
+		SIC_economic_liberalization = {
+			allowed = {
+				original_tag = SIC
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_national_mobilization_focus
+			
+			modifier = {
+				consumer_goods_factor = 0.02 
+				min_export = 0.02
+				production_speed_buildings_factor = 0.1	
+			}
+		}
+	}
+}

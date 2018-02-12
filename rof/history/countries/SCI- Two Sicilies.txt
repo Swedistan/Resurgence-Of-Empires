@@ -34,7 +34,7 @@ set_politics = {
 	ruling_party = democratic
 	last_election = "1933.3.5"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
 
 set_convoys = 20
@@ -79,9 +79,14 @@ create_country_leader = {
 	}
 }
 
-#create_field_marshal = {
-#	name = "Xhemal Aranitasi"
-#	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-#	skill = 2
-#}
+create_field_marshal = {
+	name = "Giovanni Messe"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	skill = 2
+}
+create_field_marshal = {
+	name = "Luca Acciai"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+	skill = 1
+}
 
