@@ -237,7 +237,6 @@ focus_tree = {
 			}
 		}
 	}
-		}
 	focus = {
 		id = crush_the_duchies
 		icon = GFX_goal_generic_major_war
