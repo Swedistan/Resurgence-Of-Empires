@@ -170,14 +170,14 @@ focus_tree = {
 		}
 		available = {
 			threat > 0.5
-			MIL = {
+			MLA = {
 				has_government = democratic
 				is_subject = no
 			}
 		}
 		prerequisite = { focus = SCI_italian_democracy }
 		completion_reward = {
-			add_to_faction = MIL
+			add_to_faction = MLA
 		}
 	}
 	focus = {
