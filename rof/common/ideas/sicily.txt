@@ -38,5 +38,30 @@ ideas = {
 				unity_factor = 0.05
 			}
 		}
+		
+	}
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		SCI_materiel_man1 = {
+			
+			picture = generic_infantry_equipment_manufacturer_1
+
+			
+			allowed = {
+				original_tag = SCI
+			}
+			available = {
+				has_completed_focus = SCI_infantry_manufacturer
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			traits = { TUS_infantry_equipment_manufacturer }
+
+		}
 	}
 }

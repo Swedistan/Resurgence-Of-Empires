@@ -234,7 +234,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_albanian_claim
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_focus_goal_sicily_albania
 		x = 9
 		y = 3
 		cost = 10
@@ -251,7 +251,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_albanian_takeover
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_focus_goal_sicily_albania
 		x = 9
 		y = 4
 		cost = 10
@@ -644,7 +644,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_research_grants
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_focus_research
 		x = 17
 		y = 1
 		cost = 10
@@ -660,7 +660,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_popular_radio
-		#icon = GFX_goal_generic_soviet_construction
+		#icon = GFX_goal_generic_secret_weapon
 		x = 19
 		y = 1
 		cost = 10
@@ -676,7 +676,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_military_radio
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_secret_weapon
 		x = 19
 		y = 2
 		cost = 10
@@ -693,7 +693,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_taranto_college
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_focus_research
 		x = 17
 		y = 2
 		cost = 10
@@ -710,7 +710,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_road_survey
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 22
 		y = 0
 		cost = 10
@@ -723,7 +723,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_standardize_gauge
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 22
 		y = 1
 		cost = 10
@@ -746,7 +746,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_rebuild_railway_1
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 21
 		y = 2
 		cost = 10
@@ -763,7 +763,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_rebuild_railway_2
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 23
 		y = 2
 		cost = 10
@@ -783,7 +783,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_state_owned_enterprises
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 24
 		y = 0
 		cost = 10
@@ -800,7 +800,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_military_industrial_complex
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_construct_mil_factory
 		x = 24
 		y = 1
 		cost = 10
@@ -818,7 +818,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_regional_planning
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 24
 		y = 3
 		cost = 10
@@ -856,7 +856,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_pilot_school
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_air_doctrine
 		x = 26
 		y = 1
 		cost = 10
@@ -873,7 +873,7 @@ focus_tree = {
 	##Navy
 	focus = {
 		id = SCI_naval_academy
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_build_navy
 		x = 30
 		y = 0
 		cost = 10
@@ -887,7 +887,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_dockyard_construction
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 29
 		y = 1
 		cost = 20
@@ -905,7 +905,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_naval_research_facility
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_build_navy
 		x = 31
 		y = 1
 		cost = 10
@@ -930,6 +930,7 @@ focus_tree = {
 			factor = 1
 		}
 		prerequisite = { focus = SCI_naval_research_facility }
+		prerequisite = { focus = SCI_special_forces } 
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = 	marine_tech } 
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = 	tp_tech } 
@@ -937,7 +938,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_naval_airforce
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_air_naval_bomber
 		x = 28
 		y = 2
 		cost = 10
@@ -1058,6 +1059,128 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			set_politics = { ruling_party = neutrality elections_allowed = yes } 
+		}
+	}
+	focus = {
+		id = SCI_army_training
+		#icon = GFX_goal_generic_soviet_construction
+		x = 34
+		y = 0
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 10 
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = army_doctrine } 
+		}
+	}
+	focus = {
+		id = SCI_special_forces
+		#icon = GFX_goal_generic_soviet_construction
+		x = 33
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_army_training }
+		completion_reward = {
+			army_experience = 10 
+			add_tech_bonus = { bonus = 0.25 uses = 2 category = mountaineers_tech category = para_tech category = category = marine_tech } 
+		}
+	}
+	focus = {
+		id = SCI_infantry_equipment
+		#icon = GFX_goal_generic_soviet_construction
+		x = 34
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_army_training }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = infantry_weapons } 
+		}
+	}
+	focus = {
+		id = SCI_support_equipment
+		#icon = GFX_goal_generic_soviet_construction
+		x = 33
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_infantry_equipment }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = support_tech } 
+		}
+	}
+	focus = {
+		id = SCI_infantry_manufacturer
+		#icon = GFX_goal_generic_soviet_construction
+		x = 35
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_infantry_equipment }
+		completion_reward = {
+			army_experience = 5
+		}
+	}
+	focus = {
+		id = SCI_artillery_factories
+		#icon = GFX_goal_generic_soviet_construction
+		x = 36
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_army_training }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = artillery } 
+		}
+	}
+	focus = {
+		id = SCI_tank_division
+		#icon = GFX_goal_generic_soviet_construction
+		x = 38
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_army_training }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = armor } 
+		}
+	}
+	focus = {
+		id = SCI_motorization
+		#icon = GFX_goal_generic_soviet_construction
+		x = 37
+		y = 2
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_tank_division }
+		prerequisite = { focus = SCI_artillery_factories }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = motorized_equipment } 
 		}
 	}
 }

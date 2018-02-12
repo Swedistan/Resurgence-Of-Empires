@@ -1,3 +1,6 @@
 spriteTypes = { 
- 
+ 	SpriteType = { 
+		name = "GFX_focus_goal_sicily_albania"
+		texturefile = "gfx/interface/goals/sicily/goal_sicily_albania.dds"
+	}
  }
