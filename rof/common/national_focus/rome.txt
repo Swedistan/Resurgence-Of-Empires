@@ -319,4 +319,42 @@ focus_tree = {
             add_ideas = rome_neutral
         }
     }
+        focus = {
+            id = connect_the_duchies
+            icon = GFX_goal_generic_construct_civilian
+            text = "Connect The Duchies"
+            x = 4
+            y = 4
+            cost = 10
+        available_if_capitulated = no
+        ai_will_do = {
+            factor = 0
+        }
+        prerequisite = { focus = crush_the_duchies }
+        prerequisite = { focus = build_roman_roads }
+        completion_reward = {
+             157 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			 161 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }	
+        }
+    }   
+        focus = {
+	    id = repair_the_dockyards
+	    icon = GFX_goal_generic_construct_naval_dockyard
+	    text = "Repair The Dockyards"
+	    x = 16
+	    y = 0
+	    cost = 10
+	available_if_capitulated = no
+        ai_will_do = {
+	     factor = 1
+	}
+	completion_reward = {
+	    114 = {
+		add_extra_state_shared_building_slots  = 3
+		add_building_construction = { type = dockyard level = 3 instant_build = yes }
+	}
+     }
+   }
 }    
