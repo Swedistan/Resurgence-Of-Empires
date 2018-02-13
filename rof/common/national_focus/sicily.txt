@@ -203,6 +203,24 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SCI_italian_plebescite
+		#icon = GFX_goal_generic_soviet_construction
+		x = 4
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		prerequisite = { focus = SCI_italian_democracy_milan }
+		prerequisite = { focus = SCI_italian_democracy_venice }
+		completion_reward = {
+			##Event Chain Italy
+		}
+	}
+	focus = {
 		id = SCI_election_neutrality
 		#icon = GFX_goal_generic_soviet_construction
 		x = 9
@@ -363,11 +381,52 @@ focus_tree = {
 				has_government = communism
 			}
 		}
+		bypass = {
+			NOT = {
+				TUS = { has_government = communism } 
+			}
+		}
 		prerequisite = { focus = SCI_italian_confederation }
 		completion_reward = {
 			TUS = {
 				country_event = { days = 1 id = Sicily.5 }
 			}
+		}
+	}
+	focus = {
+		id = SCI_prepare_war
+		#icon = GFX_goal_generic_soviet_construction
+		x = 10
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		prerequisite = { focus = SCI_italian_confederation_2 }
+		completion_reward = {
+			add_timed_idea = { idea = partisan_suppression_focus  days = 900 } 
+			add_timed_idea = { idea = rehabilitated_military_focus  days = 900 } 
+		}
+	}
+	focus = {
+		id = SCI_italian_comrades
+		#icon = GFX_goal_generic_soviet_construction
+		x = 12
+		y = 5
+		cost = 20
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		prerequisite = { focus = SCI_italian_confederation_2 }
+		completion_reward = {
+			set_country_flag = italian_comrades
+			country_event = { days = 1 id = Sicily.7 }
 		}
 	}
 	##Fascism
@@ -380,6 +439,9 @@ focus_tree = {
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
+		}
+		available = {
+			always = no
 		}
 		prerequisite = { focus = SCI_election_1937 }
 		mutually_exclusive  = { focus = SCI_election_communism focus = SCI_election_democratic focus = SCI_election_neutrality }
@@ -399,7 +461,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = SCI_election_fascism }
 		completion_reward = {
-			add_threat = 2 
+			add_threat = 5
 			add_political_power = 50
 		}
 	}
@@ -415,7 +477,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = SCI_show_of_force }
 		completion_reward = {
-			add_threat = 2 
+			add_threat = 5 
 			hidden_effect = {
 			every_state = {
 				limit = {
