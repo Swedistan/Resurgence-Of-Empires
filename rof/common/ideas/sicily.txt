@@ -11,7 +11,8 @@ ideas = {
 				consumer_goods_factor = 0.05 
 				min_export = -0.05
 				production_speed_buildings_factor = 0.2
-				local_resources_factor = 0.05			
+				local_resources_factor = 0.05
+				research_time_factor = -0.05 			
 			}
 		}
 		SCI_economic_liberalization = {
@@ -38,7 +39,84 @@ ideas = {
 				unity_factor = 0.05
 			}
 		}
-		
+		SCI_royal_guards = {
+			allowed = {
+				original_tag = SCI
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				cavalry_defence_factor = 0.05 
+				cavalry_attack_factor = 0.05 			
+			}
+		}
+		SCI_black_ops = {
+			allowed = {
+				original_tag = SCI
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				 political_power_gain = -0.5 
+				industrial_capacity_factory = -0.15 
+				industrial_capacity_dockyard = -0.15 
+			}
+		}
+		SCI_blacker_ops = {
+			allowed = {
+				original_tag = SCI
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				 political_power_gain = -0.5 
+				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.25 
+			}
+		}
+		SCI_black_ops_2 = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.5 
+				industrial_capacity_factory = -0.15 
+				industrial_capacity_dockyard = -0.15 
+				unity_factor = -0.10 
+			}
+		}
+		SCI_blacker_ops_2 = {
+			allowed = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				 political_power_gain = -0.5 
+				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.25
+				unity_factor = -0.15 
+			}
+		}
+		SCI_empire = {
+			allowed = {
+				original_tag = SCI
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.05
+				unity_factor = 0.10 
+			}
+		}
 	}
 	materiel_manufacturer = {
 			

@@ -31,6 +31,12 @@ focus_tree = {
 		available = {
 			date > 1937.5.2
 		}
+		bypass = {
+			OR = {
+				has_government = communism
+				has_government = fascism
+			}
+		}
 		completion_reward = {
 			add_political_power = 120
 		}
@@ -234,12 +240,12 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			always = no
 		}
 		prerequisite = { focus = SCI_election_1937 }
 		mutually_exclusive  = { focus = SCI_election_fascism focus = SCI_election_communism focus = SCI_election_democratic }
 		completion_reward = {
-			set_politics = { ruling_party = neutrality elections_allowed = no } 
+			set_politics = { ruling_party = neutrality elections_allowed = no }
+			add_popularity = { ideology = neutrality popularity = 0.5 } 
 		}
 	}
 	focus = {
@@ -254,7 +260,106 @@ focus_tree = {
 		}
 		prerequisite = { focus = SCI_election_neutrality }
 		completion_reward = {
+			add_ideas = SCI_royal_guards
 		} 
+	}
+	focus = {
+		id = SCI_african_claims
+		#icon = GFX_focus_goal_sicily_albania
+		x = 7
+		y = 3
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_royal_guards }
+		completion_reward = {
+			add_threat = 5 
+			add_state_claim = 458
+			add_state_claim = 665
+			add_state_claim = 448
+		}
+	}
+	focus = {
+		id = SCI_libyan_intervention
+		#icon = GFX_focus_goal_sicily_albania
+		x = 7
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_african_claims }
+		completion_reward = {
+			add_threat = 10 
+			puppet = LBA 
+			LBA = {
+				start_civil_war = { ideology = democratic size = 0.9 } 
+			}
+		}
+	}
+	focus = {
+		id = SCI_tunisian_black_ops
+		#icon = GFX_focus_goal_sicily_albania
+		x = 7
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_libyan_intervention }
+		completion_reward = {
+			add_threat = 5 
+			add_ideas = SCI_black_ops
+			FRA = {
+				add_ideas = SCI_black_ops_2
+			}
+		}
+	}
+	focus = {
+		id = SCI_offer_buy_tunisia
+		#icon = GFX_focus_goal_sicily_albania
+		x = 7
+		y = 5
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_tunisian_black_ops }
+		completion_reward = {
+			add_threat = 5 
+			remove_ideas = SCI_black_ops
+			add_political_power = -50
+			FRA = {
+				country_event = { days = 10 id = Sicily.6 }
+			}
+		}
+	}
+	focus = {
+		id = SCI_offer_buy_tunisia_2
+		#icon = GFX_focus_goal_sicily_albania
+		x = 6
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = tunisia_offer_refused
+		}
+		prerequisite = { focus = SCI_offer_buy_tunisia }
+		completion_reward = {
+			add_timed_idea = { idea = SCI_blacker_ops days = 90 } 
+			add_timed_idea = { idea = SCI_blacker_ops_2 days = 90 } 
+			FRA = {
+				country_event = { days = 100 id = Sicily.7 }
+			}
+		}
 	}
 	focus = {
 		id = SCI_albanian_claim
@@ -304,6 +409,77 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SCI_greek_claims
+		#icon = GFX_focus_goal_sicily_albania
+		x = 9
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_albanian_takeover }
+		completion_reward = {
+			add_state_claim = 47
+		}
+	}
+	focus = {
+		id = SCI_greek_invasion
+		#icon = GFX_focus_goal_sicily_albania
+		x = 9
+		y = 7
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_greek_claims }
+		completion_reward = {
+			create_wargoal = { type = take_claimed_state target = GRE } 
+		}
+	}
+	focus = {
+		id = SCI_sicilian_empire
+		#icon = GFX_focus_goal_sicily_albania
+		x = 8
+		y = 8
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_greek_invasion }
+		prerequisite = { focus = SCI_offer_buy_tunisia }
+		completion_reward = {
+			add_ideas = SCI_empire
+			add_political_power = 50
+			if = {
+				limit = {
+					44 = { is_owned_by = SCI } 
+				}
+				add_state_core = 44 
+			}
+			if = {
+				limit = {
+					47 = { is_owned_by = SCI } 
+				}
+				add_state_core = 47 
+			}
+			if = {
+				limit = {
+					458 = { is_owned_by = SCI } 
+				}
+				add_state_core = 458 
+			}
+			if = {
+				limit = {
+					665 = { is_owned_by = SCI } 
+				}
+				add_state_core = 665 
+			}
+		}
+	}
+	focus = {
 		id = SCI_economic_liberalization
 		#icon = GFX_goal_generic_soviet_construction
 		x = 7
@@ -331,7 +507,8 @@ focus_tree = {
 		prerequisite = { focus = SCI_election_1937 }
 		mutually_exclusive  = { focus = SCI_election_fascism focus = SCI_election_democratic focus = SCI_election_neutrality }
 		completion_reward = {
-			set_politics = { ruling_party = communism elections_allowed = no } 
+			set_politics = { ruling_party = communism elections_allowed = no }
+			add_popularity = { ideology = communism popularity = 0.5 } 			
 		}
 	}
 	focus = {
