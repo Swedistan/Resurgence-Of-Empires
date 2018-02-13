@@ -174,7 +174,6 @@ country_event = {
 	id = Sicily.10
 	title = Sicily.10.t
 	desc = Sicily.10.d
-	fire_only_once = yes
 	trigger = {
 		157 = {
 			OR = {
@@ -192,6 +191,7 @@ country_event = {
 	mean_time_to_happen = {
 		days = 1
 	}
+	fire_only_once = yes
 	option = { #Annex
 		name = Sicily.10.a
 		if = {
@@ -306,29 +306,107 @@ country_event = {
 		}
 	}
 }
-# Phase 3: Rome Results 
+# Phase 3: Rome 
 country_event = {
 	id = Sicily.13
 	title = Sicily.13.t
 	desc = Sicily.13.d
-	is_triggered_only = yes
-	option = { 
-		name = Sicily.13.a
+	trigger = {
+		OR = {
+			AND = {
+				158 = {
+					OR = {
+					is_in_faction_with = SCI
+					is_owned_by = SCI
+					}
+				}
+				159 = {
+					OR = {
+					is_in_faction_with = SCI
+					is_owned_by = SCI
+					}				
+				}
+			}
+			AND = {
+				159 = {
+					OR = {
+					is_in_faction_with = SCI
+					is_owned_by = SCI
+					}				
+				}
+				160 = {
+					OR = {
+					is_in_faction_with = SCI
+					is_owned_by = SCI
+					}				
+				}
+			}
+		}
 	}
-	option = { 
-		name = Sicily.13.b
+	mean_time_to_happen = {
+		days = 1
+	}
+	fire_only_once = yes
+	option = { #threaten
+		name = Sicily.13.a
+			RME = {
+				country_event = { days = 1 id = Sicily.14 }
+			}
 	}
 }
-# Phase 3: Italian Conference 
+# Phase 3: Rome Answer 
 country_event = {
 	id = Sicily.14
 	title = Sicily.14.t
 	desc = Sicily.14.d
 	is_triggered_only = yes
-	option = { 
+	option = { #accept
 		name = Sicily.14.a
+		SCI = {
+			annex_country = { target = ROOT } 
+		}
 	}
-	option = { 
+	option = { #refuse
 		name = Sicily.14.b
+		SCI = {
+			create_wargoal = { type = annex_everything target = ROOT } 
+		}
+	}
+}
+# Phase 4: Ialian Conference
+country_event = {
+	id = Sicily.15
+	title = Sicily.15.t
+	desc = Sicily.15.d
+	fire_only_once = yes
+	trigger = {
+		AND = {
+		2 = {
+			is_in_faction_with = SCI
+			is_owned_by = SCI
+		}
+		161 = {
+			is_in_faction_with = SCI
+			is_owned_by = SCI
+		}
+		162 = {
+			is_in_faction_with = SCI
+			is_owned_by = SCI
+		}
+		117 = {
+			is_in_faction_with = SCI
+			is_owned_by = SCI
+		}
+		159 = {
+			is_in_faction_with = SCI
+			is_owned_by = SCI
+		}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = { #Conference
+		name = Sicily.15.a
 	}
 }
