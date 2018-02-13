@@ -596,7 +596,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_central_italian_comrades
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_focus_goal_central_italy
 		x = 12
 		y = 5
 		cost = 10
@@ -616,7 +616,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_piedmont_comrades
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_focus_goal_piedmont_comrades
 		x = 11
 		y = 6
 		cost = 10
@@ -648,7 +648,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_milan_comrades
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_focus_goal_milan_comrades
 		x = 13
 		y = 6
 		cost = 10
@@ -679,7 +679,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_rome_comrades
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_focus_goal_rome_comrades
 		x = 12
 		y = 7
 		cost = 10

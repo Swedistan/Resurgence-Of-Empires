@@ -11,4 +11,20 @@ spriteTypes = {
 		name = "GFX_focus_goal_ideological_struggle"
 		texturefile = "gfx/interface/goals/sicily/goal_ideological_struggle.dds"
 	}
+	SpriteType = { 
+		name = "GFX_focus_goal_central_italy"
+		texturefile = "gfx/interface/goals/sicily/goal_central_italy.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_goal_milan_comrades"
+		texturefile = "gfx/interface/goals/sicily/goal_milan_comrades.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_goal_piedmont_comrades"
+		texturefile = "gfx/interface/goals/sicily/goal_piedmont_comrades.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_goal_rome_comrades"
+		texturefile = "gfx/interface/goals/sicily/goal_rome_comrades.dds"
+	}
  }
