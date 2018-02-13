@@ -304,8 +304,9 @@ focus_tree = {
         }
     }
 	focus = {
-	    id = RME_neutral_majority
+	    id = monarchist_majority
 	    icon = GFX_focus_generic_support_the_left_right
+	    text = "Monarchist Majoirty"v
 	    x = 10
 	    y = 1
 	    cost = 10
