@@ -303,4 +303,19 @@ focus_tree = {
             add_ideas = internationalism
         }
     }
+	focus = {
+	    id = RME_neutral_majority
+	    icon = GFX_focus_generic_support_the_left_right
+	    x = 10
+	    y = 1
+	    cost = 10
+        available_if_capitulated = yes
+        ai_will_do = {
+            factor = 0
+        }
+        prerequisite = { focus = organise_the_senate }
+        completion_reward = {
+            add_ideas = rome_neutral
+        }
+    }
 }    

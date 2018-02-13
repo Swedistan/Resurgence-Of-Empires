@@ -1,0 +1,17 @@
+ideas = {
+	country = {
+		rome_neutral = {
+			allowed = {
+				original_tag = RME
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+			
+			modifier = {
+				 neutrality_drift = 0.10
+			}
+		}
+	}
+}

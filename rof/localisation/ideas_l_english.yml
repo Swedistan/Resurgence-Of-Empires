@@ -2487,3 +2487,6 @@
  TUS_infantry_equipment_manufacturer:0 "Mass Production Arms Company"
  TUS_materiel_man1:0 "Pisa Weapons Plant"
  TUS_materiel_man1_desc:0 "A weapons plant specializing in mass production of infantry equipment."
+ 
+ rome_neutral:0 "Neutrality"
+ rome_neutral_desc:0 "Rome drifts towards neutrality."
