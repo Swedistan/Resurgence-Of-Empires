@@ -45,6 +45,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			always = no
+		}
 		mutually_exclusive  = { focus = SCI_election_fascism focus = SCI_election_communism focus = SCI_election_neutrality }
 		prerequisite = { focus = SCI_election_1937 }
 		completion_reward = {
@@ -230,6 +233,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			always = no
+		}
 		prerequisite = { focus = SCI_election_1937 }
 		mutually_exclusive  = { focus = SCI_election_fascism focus = SCI_election_communism focus = SCI_election_democratic }
 		completion_reward = {
@@ -412,11 +418,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SCI_italian_comrades
+		id = SCI_central_italian_comrades
 		#icon = GFX_goal_generic_soviet_construction
 		x = 12
 		y = 5
-		cost = 20
+		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -425,8 +431,161 @@ focus_tree = {
 		}
 		prerequisite = { focus = SCI_italian_confederation_2 }
 		completion_reward = {
-			set_country_flag = italian_comrades
-			country_event = { days = 1 id = Sicily.7 }
+			add_threat = 5
+			create_wargoal = { type = annex_everything target = UID } 
+		}
+	}
+	focus = {
+		id = SCI_piedmont_comrades
+		#icon = GFX_goal_generic_soviet_construction
+		x = 11
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			157 = {
+				OR = {
+					is_in_faction_with = SCI 
+					is_owned_by = SCI
+				}
+			}
+			161 = {
+				OR = {
+					is_in_faction_with = SCI
+					is_owned_by = SCI
+				}
+			}
+		}
+		prerequisite = { focus = SCI_central_italian_comrades }
+		completion_reward = {
+			add_threat = 5
+			create_wargoal = { type = puppet_wargoal_focus target = PIE } 
+		}
+	}
+	focus = {
+		id = SCI_milan_comrades
+		#icon = GFX_goal_generic_soviet_construction
+		x = 13
+		y = 6
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			157 = {
+				OR = {
+					is_in_faction_with = SCI 
+					is_owned_by = SCI
+				}
+			}
+			161 = {
+				OR = {
+					is_in_faction_with = SCI
+					is_owned_by = SCI
+				}
+			}		
+		}
+		prerequisite = { focus = SCI_central_italian_comrades }
+		completion_reward = {
+			add_threat = 5
+			create_wargoal = { type = annex_everything target = MLA } 
+		}
+	}
+	focus = {
+		id = SCI_rome_comrades
+		#icon = GFX_goal_generic_soviet_construction
+		x = 12
+		y = 7
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			158 = {
+				OR = {
+					is_in_faction_with = SCI 
+					is_owned_by = SCI
+				}
+			}
+			159 = {
+				OR = {
+					is_in_faction_with = SCI
+					is_owned_by = SCI
+				}
+			}		
+		}
+		prerequisite = { focus = SCI_milan_comrades }
+		prerequisite = { focus = SCI_piedmont_comrades }
+		completion_reward = {
+			add_threat = 5
+			create_wargoal = { type = annex_everything target = RME } 
+		}
+	}
+		focus = {
+		id = SCI_italian_comrades
+		#icon = GFX_goal_generic_soviet_construction
+		x = 12
+		y = 8
+		cost = 20
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			158 = {
+				OR = {
+					is_in_faction_with = SCI 
+					is_owned_by = SCI
+				}
+			}
+			159 = {
+				OR = {
+					is_in_faction_with = SCI
+					is_owned_by = SCI
+				}
+			}	
+			157 = {
+				OR = {
+					is_in_faction_with = SCI 
+					is_owned_by = SCI
+				}
+			}
+			161 = {
+				OR = {
+					is_in_faction_with = SCI
+					is_owned_by = SCI
+				}
+			}
+			2 = {
+				OR = {
+					is_in_faction_with = SCI 
+					is_owned_by = SCI
+				}
+			}
+			117 = {
+				OR = {
+					is_in_faction_with = SCI
+					is_owned_by = SCI
+				}
+			}			
+		}
+		prerequisite = { focus = SCI_rome_comrades }
+		completion_reward = {
+			ITA = { set_state_owner = 2 } 
+			ITA = {
+				change_tag_from = SCI 
+			}	
+			ITA = {
+				set_politics = { ruling_party = communism elections_allowed = no }
+			}
+			ITA = {
+				annex_country = { target = SCI } 	
+			}
 		}
 	}
 	##Fascism
