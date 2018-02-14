@@ -60,176 +60,176 @@ focus_tree = {
 			set_politics = { ruling_party = democratic elections_allowed = no } 
 		}
 	}
-	focus = {
-		id = SCI_bulwark_of_democracy
-		icon = GFX_goal_support_democracy
-		x = 3
-		y = 2
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
-		mutually_exclusive  = { focus = SCI_political_isolation }
-		prerequisite = { focus = SCI_election_democratic }
-		completion_reward = {
-			set_rule = { can_send_volunteers = yes }
-		}
-	}
-	focus = {
-		id = SCI_united_duchies_democracy
-		icon = GFX_goal_support_democracy
-		x = 3
-		y = 3
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			threat > 0.2
-		}
-		bypass = { 
-			OR = {
-				UID = {
-					has_government = democratic
-				}
-				UID = { exists = no } 
-			}
-		}
-		prerequisite = { focus = SCI_election_democratic }
-		completion_reward = {
-			create_wargoal = { type = topple_government target = UID } 
-		}
-	}
-	focus = {
-		id = SCI_political_isolation
-		icon = GFX_goal_generic_neutrality_focus
-		x = 5
-		y = 2
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
-		mutually_exclusive  = { focus = SCI_bulwark_of_democracy }
-		prerequisite = { focus = SCI_election_democratic }
-		completion_reward = {
-			add_ideas = deterrence
-			add_ideas = SCI_domestic_focus
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-			}
-		}
-	}
-	focus = {
-		id = SCI_wake_up
-		icon = GFX_goal_support_democracy
-		x = 5
-		y = 3
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			threat > 0.5
-		}
-		prerequisite = { focus = SCI_political_isolation }
-		completion_reward = {
-			remove_ideas = deterrence
-			remove_ideas = SCI_domestic_focus
-		}
-	}
-	focus = {
-		id = SCI_italian_democracy
-		icon = GFX_goal_support_democracy
-		x = 4
-		y = 4
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			threat > 0.5
-		}
-		prerequisite = { focus = SCI_wake_up focus = SCI_united_duchies_democracy }
-		completion_reward = {
-			create_faction = "Italian_Union"
-			if = {
-				limit = {
-					UID = {
-						has_government = democratic
-					}
-				}
-				 add_to_faction = UID
-			}
-		}
-	}
-	focus = {
-		id = SCI_italian_democracy_milan
-		icon = GFX_goal_support_democracy
-		x = 3
-		y = 5
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			threat > 0.5
-			MLA = {
-				has_government = democratic
-				is_subject = no
-			}
-		}
-		prerequisite = { focus = SCI_italian_democracy }
-		completion_reward = {
-			add_to_faction = MLA
-		}
-	}
-	focus = {
-		id = SCI_italian_democracy_venice
-		icon = GFX_goal_support_democracy
-		x = 5
-		y = 5
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			threat > 0.5
-			VNC = {
-				has_government = democratic
-				is_subject = no
-			}
-		}
-		prerequisite = { focus = SCI_italian_democracy }
-		completion_reward = {
-			add_to_faction = VNC
-		}
-	}
-	focus = {
-		id = SCI_italian_plebescite
-		icon = GFX_goal_support_democracy
-		x = 4
-		y = 6
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			always = no
-		}
-		prerequisite = { focus = SCI_italian_democracy_milan }
-		prerequisite = { focus = SCI_italian_democracy_venice }
-		completion_reward = {
-			##Event Chain Italy
-		}
-	}
+	# focus = {
+		# id = SCI_bulwark_of_democracy
+		# icon = GFX_goal_support_democracy
+		# x = 3
+		# y = 2
+		# cost = 10
+		# available_if_capitulated = no
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# mutually_exclusive  = { focus = SCI_political_isolation }
+		# prerequisite = { focus = SCI_election_democratic }
+		# completion_reward = {
+			# set_rule = { can_send_volunteers = yes }
+		# }
+	# }
+	# focus = {
+		# id = SCI_united_duchies_democracy
+		# icon = GFX_goal_support_democracy
+		# x = 3
+		# y = 3
+		# cost = 10
+		# available_if_capitulated = no
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# available = {
+			# threat > 0.2
+		# }
+		# bypass = { 
+			# OR = {
+				# UID = {
+					# has_government = democratic
+				# }
+				# UID = { exists = no } 
+			# }
+		# }
+		# prerequisite = { focus = SCI_election_democratic }
+		# completion_reward = {
+			# create_wargoal = { type = topple_government target = UID } 
+		# }
+	# }
+	# focus = {
+		# id = SCI_political_isolation
+		# icon = GFX_goal_generic_neutrality_focus
+		# x = 5
+		# y = 2
+		# cost = 10
+		# available_if_capitulated = no
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# mutually_exclusive  = { focus = SCI_bulwark_of_democracy }
+		# prerequisite = { focus = SCI_election_democratic }
+		# completion_reward = {
+			# add_ideas = deterrence
+			# add_ideas = SCI_domestic_focus
+			# every_owned_state = {
+				# add_extra_state_shared_building_slots = 1
+			# }
+		# }
+	# }
+	# focus = {
+		# id = SCI_wake_up
+		# icon = GFX_goal_support_democracy
+		# x = 5
+		# y = 3
+		# cost = 10
+		# available_if_capitulated = no
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# available = {
+			# threat > 0.5
+		# }
+		# prerequisite = { focus = SCI_political_isolation }
+		# completion_reward = {
+			# remove_ideas = deterrence
+			# remove_ideas = SCI_domestic_focus
+		# }
+	# }
+	# focus = {
+		# id = SCI_italian_democracy
+		# icon = GFX_goal_support_democracy
+		# x = 4
+		# y = 4
+		# cost = 10
+		# available_if_capitulated = no
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# available = {
+			# threat > 0.5
+		# }
+		# prerequisite = { focus = SCI_wake_up focus = SCI_united_duchies_democracy }
+		# completion_reward = {
+			# create_faction = "Italian_Union"
+			# if = {
+				# limit = {
+					# UID = {
+						# has_government = democratic
+					# }
+				# }
+				 # add_to_faction = UID
+			# }
+		# }
+	# }
+	# focus = {
+		# id = SCI_italian_democracy_milan
+		# icon = GFX_goal_support_democracy
+		# x = 3
+		# y = 5
+		# cost = 10
+		# available_if_capitulated = no
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# available = {
+			# threat > 0.5
+			# MLA = {
+				# has_government = democratic
+				# is_subject = no
+			# }
+		# }
+		# prerequisite = { focus = SCI_italian_democracy }
+		# completion_reward = {
+			# add_to_faction = MLA
+		# }
+	# }
+	# focus = {
+		# id = SCI_italian_democracy_venice
+		# icon = GFX_goal_support_democracy
+		# x = 5
+		# y = 5
+		# cost = 10
+		# available_if_capitulated = no
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# available = {
+			# threat > 0.5
+			# VNC = {
+				# has_government = democratic
+				# is_subject = no
+			# }
+		# }
+		# prerequisite = { focus = SCI_italian_democracy }
+		# completion_reward = {
+			# add_to_faction = VNC
+		# }
+	# }
+	# focus = {
+		# id = SCI_italian_plebescite
+		# icon = GFX_goal_support_democracy
+		# x = 4
+		# y = 6
+		# cost = 10
+		# available_if_capitulated = no
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# available = {
+			# always = no
+		# }
+		# prerequisite = { focus = SCI_italian_democracy_milan }
+		# prerequisite = { focus = SCI_italian_democracy_venice }
+		# completion_reward = {
+			# ##Event Chain Italy
+		# }
+	# }
 	focus = {
 		id = SCI_election_neutrality
 		icon = GFX_goal_generic_neutrality_focus
@@ -794,227 +794,227 @@ focus_tree = {
 			set_politics = { ruling_party = fascism elections_allowed = no } 
 		}
 	}
-	focus = {
-		id = SCI_show_of_force
-		#icon = GFX_goal_generic_soviet_construction
-		x = 15
-		y = 2
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = { focus = SCI_election_fascism }
-		completion_reward = {
-			add_threat = 5
-			add_political_power = 50
-		}
-	}
-	focus = {
-		id = SCI_italian_claims
-		#icon = GFX_goal_generic_soviet_construction
-		x = 15
-		y = 3
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = { focus = SCI_show_of_force }
-		completion_reward = {
-			add_threat = 5 
-			hidden_effect = {
-			every_state = {
-				limit = {
-					region = 23
-					NOT = {
-						is_core_of = ROOT
-					}
-				}
-				add_claim_by = ROOT
-			} 
-			add_state_claim = 735 
-			add_state_claim = 158 
-			add_state_claim = 159 
-			add_state_claim = 160 
-			add_state_claim = 736 
-			add_state_claim = 163
-			add_state_claim = 114
-			add_state_claim = 1
-		}
-		}
-	}
-	focus = {
-		id = SCI_march_on_rome
-		icon = GFX_focus_goal_sicily_rome
-		x = 15
-		y = 4
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = { focus = SCI_italian_claims }
-		completion_reward = {
-			add_state_core = 2
-			create_wargoal = { type = annex_everything target = RME } 
-		}
-	}
-	focus = {
-		id = SCI_northern_allegiance
-		#icon = GFX_goal_generic_soviet_construction
-		x = 14
-		y = 5
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			ROOT = {
-				controls_state = 2
-			}
-		}
-		prerequisite = { focus = SCI_march_on_rome }
-		completion_reward = {
-			if = {
-				limit = {
-					PIE = {
-						OR = {
-							has_government = democratic
-							has_government = neutrality
-							has_government = fascism
-						}
-						is_subject = no
-					}
-				}
-				PIE = {
-					country_event = { days = 1 id = Sicily.6 } 
-				}
-			}
-			if = {
-				limit = {
-					MLA = {
-						OR = {
-							has_government = democratic
-							has_government = neutrality
-							has_government = fascism
-						}
-						is_subject = no
-					}
-				}
-				MLA = {
-					country_event = { days = 1 id = Sicily.6 } 
-				}
-			}
-			if = {
-				limit = {
-					UID = {
-						OR = {
-							has_government = democratic
-							has_government = neutrality
-							has_government = fascism
-						}
-						is_subject = no
-					}
-				}
-				UID = {
-					country_event = { days = 1 id = Sicily.6 } 
-				}
-			}
-			if = {
-				limit = {
-					VNC = {
-						OR = {
-							has_government = democratic
-							has_government = neutrality
-							has_government = fascism
-						}
-						is_subject = no
-					}
-				}
-				VNC = {
-					country_event = { days = 1 id = Sicily.6 } 
-				}
-			}
-			if = {
-				limit = {
-					TUS = {
-						OR = {
-							has_government = democratic
-							has_government = neutrality
-							has_government = fascism
-						}
-						is_subject = no
-					}
-				}
-				TUS = {
-					country_event = { days = 1 id = Sicily.6 } 
-				}			}
-		}
-	}
-	focus = {
-		id = SCI_ideological_struggle
-		icon = GFX_focus_goal_ideological_struggle
-		x = 16
-		y = 5
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = { focus = SCI_march_on_rome }
-		completion_reward = {
-			if = {
-				limit = {
-					PIE = {
-						OR = {
-							has_government = communism
-						}
-					}
-				}
-				create_wargoal = { type = annex_everything target = PIE } 
-			}
-			if = {
-				limit = {
-					MLA = {
-						has_government = communism
-					}
-				}
-				create_wargoal = { type = annex_everything target = MLA } 
-			}
-			if = {
-				limit = {
-					UID = {
-						OR = {
-							has_government = communism
-						}
-					}
-				}
-				create_wargoal = { type = annex_everything target = UID } 
-			}
-			if = {
-				limit = {
-					VNC = {
-						OR = {
-							has_government = communism
-						}
-					}
-				}
-				create_wargoal = { type = annex_everything target = VNC } 
-			}
-			if = {
-				limit = {
-					TUS = {
-						OR = {
-							has_government = communism
-						}
-					}
-				}
-				create_wargoal = { type = annex_everything target = TUS } 
-			}
-		}
-	}
+	# focus = {
+		# id = SCI_show_of_force
+		# #icon = GFX_goal_generic_soviet_construction
+		# x = 15
+		# y = 2
+		# cost = 10
+		# available_if_capitulated = no
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# prerequisite = { focus = SCI_election_fascism }
+		# completion_reward = {
+			# add_threat = 5
+			# add_political_power = 50
+		# }
+	# }
+	# focus = {
+		# id = SCI_italian_claims
+		# #icon = GFX_goal_generic_soviet_construction
+		# x = 15
+		# y = 3
+		# cost = 10
+		# available_if_capitulated = no
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# prerequisite = { focus = SCI_show_of_force }
+		# completion_reward = {
+			# add_threat = 5 
+			# hidden_effect = {
+			# every_state = {
+				# limit = {
+					# region = 23
+					# NOT = {
+						# is_core_of = ROOT
+					# }
+				# }
+				# add_claim_by = ROOT
+			# } 
+			# add_state_claim = 735 
+			# add_state_claim = 158 
+			# add_state_claim = 159 
+			# add_state_claim = 160 
+			# add_state_claim = 736 
+			# add_state_claim = 163
+			# add_state_claim = 114
+			# add_state_claim = 1
+		# }
+		# }
+	# }
+	# focus = {
+		# id = SCI_march_on_rome
+		# icon = GFX_focus_goal_sicily_rome
+		# x = 15
+		# y = 4
+		# cost = 10
+		# available_if_capitulated = no
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# prerequisite = { focus = SCI_italian_claims }
+		# completion_reward = {
+			# add_state_core = 2
+			# create_wargoal = { type = annex_everything target = RME } 
+		# }
+	# }
+	# focus = {
+		# id = SCI_northern_allegiance
+		# #icon = GFX_goal_generic_soviet_construction
+		# x = 14
+		# y = 5
+		# cost = 10
+		# available_if_capitulated = no
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# available = {
+			# ROOT = {
+				# controls_state = 2
+			# }
+		# }
+		# prerequisite = { focus = SCI_march_on_rome }
+		# completion_reward = {
+			# if = {
+				# limit = {
+					# PIE = {
+						# OR = {
+							# has_government = democratic
+							# has_government = neutrality
+							# has_government = fascism
+						# }
+						# is_subject = no
+					# }
+				# }
+				# PIE = {
+					# country_event = { days = 1 id = Sicily.6 } 
+				# }
+			# }
+			# if = {
+				# limit = {
+					# MLA = {
+						# OR = {
+							# has_government = democratic
+							# has_government = neutrality
+							# has_government = fascism
+						# }
+						# is_subject = no
+					# }
+				# }
+				# MLA = {
+					# country_event = { days = 1 id = Sicily.6 } 
+				# }
+			# }
+			# if = {
+				# limit = {
+					# UID = {
+						# OR = {
+							# has_government = democratic
+							# has_government = neutrality
+							# has_government = fascism
+						# }
+						# is_subject = no
+					# }
+				# }
+				# UID = {
+					# country_event = { days = 1 id = Sicily.6 } 
+				# }
+			# }
+			# if = {
+				# limit = {
+					# VNC = {
+						# OR = {
+							# has_government = democratic
+							# has_government = neutrality
+							# has_government = fascism
+						# }
+						# is_subject = no
+					# }
+				# }
+				# VNC = {
+					# country_event = { days = 1 id = Sicily.6 } 
+				# }
+			# }
+			# if = {
+				# limit = {
+					# TUS = {
+						# OR = {
+							# has_government = democratic
+							# has_government = neutrality
+							# has_government = fascism
+						# }
+						# is_subject = no
+					# }
+				# }
+				# TUS = {
+					# country_event = { days = 1 id = Sicily.6 } 
+				# }			}
+		# }
+	# }
+	# focus = {
+		# id = SCI_ideological_struggle
+		# icon = GFX_focus_goal_ideological_struggle
+		# x = 16
+		# y = 5
+		# cost = 10
+		# available_if_capitulated = no
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# prerequisite = { focus = SCI_march_on_rome }
+		# completion_reward = {
+			# if = {
+				# limit = {
+					# PIE = {
+						# OR = {
+							# has_government = communism
+						# }
+					# }
+				# }
+				# create_wargoal = { type = annex_everything target = PIE } 
+			# }
+			# if = {
+				# limit = {
+					# MLA = {
+						# has_government = communism
+					# }
+				# }
+				# create_wargoal = { type = annex_everything target = MLA } 
+			# }
+			# if = {
+				# limit = {
+					# UID = {
+						# OR = {
+							# has_government = communism
+						# }
+					# }
+				# }
+				# create_wargoal = { type = annex_everything target = UID } 
+			# }
+			# if = {
+				# limit = {
+					# VNC = {
+						# OR = {
+							# has_government = communism
+						# }
+					# }
+				# }
+				# create_wargoal = { type = annex_everything target = VNC } 
+			# }
+			# if = {
+				# limit = {
+					# TUS = {
+						# OR = {
+							# has_government = communism
+						# }
+					# }
+				# }
+				# create_wargoal = { type = annex_everything target = TUS } 
+			# }
+		# }
+	# }
 	focus = {
 		id = SCI_national_mobilisation
 		icon = GFX_goal_generic_military_deal
