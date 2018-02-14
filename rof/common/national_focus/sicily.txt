@@ -43,7 +43,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_election_democratic
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_support_democracy
 		x = 5
 		y = 1
 		cost = 10
@@ -62,7 +62,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_bulwark_of_democracy
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_support_democracy
 		x = 3
 		y = 2
 		cost = 10
@@ -78,7 +78,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_united_duchies_democracy
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_support_democracy
 		x = 3
 		y = 3
 		cost = 10
@@ -104,7 +104,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_political_isolation
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_neutrality_focus
 		x = 5
 		y = 2
 		cost = 10
@@ -124,7 +124,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_wake_up
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_support_democracy
 		x = 5
 		y = 3
 		cost = 10
@@ -143,7 +143,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_italian_democracy
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_support_democracy
 		x = 4
 		y = 4
 		cost = 10
@@ -169,7 +169,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_italian_democracy_milan
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_support_democracy
 		x = 3
 		y = 5
 		cost = 10
@@ -191,7 +191,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_italian_democracy_venice
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_support_democracy
 		x = 5
 		y = 5
 		cost = 10
@@ -213,7 +213,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_italian_plebescite
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_support_democracy
 		x = 4
 		y = 6
 		cost = 10
@@ -222,6 +222,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
+			always = no
 		}
 		prerequisite = { focus = SCI_italian_democracy_milan }
 		prerequisite = { focus = SCI_italian_democracy_venice }
@@ -231,7 +232,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_election_neutrality
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_neutrality_focus
 		x = 9
 		y = 1
 		cost = 10
@@ -250,7 +251,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_royal_guards
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_cavalry
 		x = 9
 		y = 2
 		cost = 10
@@ -481,7 +482,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_economic_liberalization
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_trade
 		x = 7
 		y = 2
 		cost = 10
@@ -496,7 +497,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_election_communism
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_support_communism
 		x = 11
 		y = 1
 		cost = 10
@@ -776,7 +777,7 @@ focus_tree = {
 	##Fascism
 	focus = {
 		id = SCI_election_fascism
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_support_fascism
 		x = 15
 		y = 1
 		cost = 10
@@ -1016,7 +1017,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_national_mobilisation
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_military_deal
 		x = 13
 		y = 2
 		cost = 10
@@ -1326,7 +1327,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_marine_training
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_special_forces
 		x = 32
 		y = 2
 		cost = 10
@@ -1483,7 +1484,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SCI_special_forces
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_special_forces
 		x = 33
 		y = 1
 		cost = 10
