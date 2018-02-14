@@ -3,7 +3,7 @@
 OOB = "RME_1936"
 
 set_technology = {
-	infantry_weapons = 1
+	infantry_weapons = 2
 	tech_support = 1
 	tech_recon = 1
 	early_destroyer = 1
@@ -40,6 +40,7 @@ set_politics = {
 }
 
 set_convoys = 20
+set_research_slots = 3
 
 create_country_leader = {
 	name = "Julius Caesar"
@@ -47,6 +48,39 @@ create_country_leader = {
 	#picture = "Portrait_Albania_King_Zog.dds"
 	expire = "1965.1.1"
 	ideology = fascism_ideology
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Antonia Gramsci"
+	#desc = "POLITICS_KING_ZOG_DESC"
+	#picture = "Portrait_Albania_King_Zog.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Julius Caesar"
+	#desc = "POLITICS_KING_ZOG_DESC"
+	#picture = "Portrait_Albania_King_Zog.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Ferruccio Parri"
+	#desc = "POLITICS_KING_ZOG_DESC"
+	#picture = "Portrait_Albania_King_Zog.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
 	traits = {
 		
 	}
