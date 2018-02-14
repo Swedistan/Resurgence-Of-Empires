@@ -214,7 +214,7 @@ focus_tree = {
 	}
 	focus = {
 		id = prepare_for_war
-		icon = GFX_goal_generic_allies_build_infantry"
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 0
 		y = 2
 		cost = 10
