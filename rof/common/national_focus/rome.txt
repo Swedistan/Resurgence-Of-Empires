@@ -418,4 +418,71 @@ focus_tree = {
             }
         }
     }
+        focus = {
+        id = new_infantry_equipment
+        icon = GFX_goal_generic_small_arms
+        x = 25
+        y = 1
+        cost = 10
+        available_if_capitulated = yes
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = { focus = organise_the_army }
+        completion_reward = {
+            add_tech_bonus = {
+                name = infantry_weapons_bonus
+                bonus = 0.5
+                uses = 2
+                category = infantry_weapons
+            }
+        }
+    }
+    focus = {
+        id = focus_on_smaller_aircraft
+        icon = GFX_goal_generic_air_fighter
+        x = 19
+        y = 1
+        cost = 10
+        available_if_capitulated = yes
+        ai_will_do = {
+            factor = 1
+        }
+        mutually_exclusive  = { focus = focus_on_larger_aircraft }
+        prerequisite = { focus = establish_the_airforce }
+        completion_reward = {
+            add_tech_bonus = {
+                name = fighter_bonus
+                bonus = 0.5
+                uses = 2 
+                technology = fighter1
+				technology = fighter2
+				technology = fighter3
+            }
+        }
+    }
+    focus = {
+        id = focus_on_larger_aircraft
+        icon = GFX_goal_generic_air_bomber
+        x = 21
+        y = 1
+        cost = 10
+        available_if_capitulated = yes
+        ai_will_do = {
+            factor = 1
+        }
+        mutually_exclusive  = { focus = focus_on_smaller_aircraft }
+        prerequisite = { focus = establish_the_airforce }
+        completion_reward = {
+            add_tech_bonus = {
+                name = bomber_bonus
+                bonus = 0.5
+                uses = 2 
+                technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+            }
+        }        
+    }
 }    
