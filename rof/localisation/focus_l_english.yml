@@ -1907,4 +1907,10 @@
  establish_the_airforce_desc:0 "We must organise all the planes we have left into wings and groups so we can have an organised and efficient airforce."
  organise_the_army:0 "Formalise The Army"
  organise_the_army_desc:0 "We must properly organise the revolutionary forces we have into an army that shall conquer new lands and reclaim old glories."
+ new_infantry_equipment:0 "Design New Infantry Equipment"
+ new_infantry_equipment_desc:0 "We mus design new infantry equipment for our legions to use to conquer new lands and make it easier to reclaim our glory."
+ focus_on_smaller_aircraft:0 "Focus On Smaller Aircraft"
+ focus_on_smaller_aircraft_desc:0 "We must focus on making smaller aircraft, like fighters, so that we can rule the skies and stop any enemy bomber from reaching our cities and industry."
+ focus_on_larger_aircraft:0 "Focus On Larger Aircraft"
+ focus_on_larger_aircraft_desc:0 "We must focus on making larger aircraft, like bombers, so that we can crush our enemies industry and cities, to force them into submission."
 
