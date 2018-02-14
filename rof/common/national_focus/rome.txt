@@ -219,9 +219,11 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 10
-
 		available_if_capitulated = yes
-
+		ai_will_do ={
+		    factor = 1
+		}
+                prerequisite = { focus = found_our_nation }
 		completion_reward = {
 			army_experience = 5
 			add_tech_bonus = {
