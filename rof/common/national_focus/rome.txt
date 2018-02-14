@@ -364,4 +364,58 @@ focus_tree = {
 			create_wargoal = { type = annex_everything target = TUS }
 		}
 	}
+		focus = {
+		id = roman_university
+		icon = GFX_focus_research
+		x = 28
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+	    id = establish_the_airforce
+        icon = GFX_goal_generic_air_doctrine
+        x = 20
+        y = 0
+        cost = 10
+        available_if_capitulated = yes
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            air_experience = 10
+            add_tech_bonus = {
+                name = air_doc_bonus
+                bonus = 0.75
+                uses = 1
+                category = air_doctrine
+            }
+        }
+	}
+	focus = {
+	    id = organise_the_army
+	    icon = GFX_goal_generic_army_doctrines
+	    x = 24
+	    y = 0
+	    cost = 10
+	    available_if_capitulated = yes
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            army_experience = 5
+            add_tech_bonus = {
+                name = land_doc_bonus
+                bonus = 0.5
+                uses = 1
+                category = land_doctrine
+            }
+        }
+    }
 }    
