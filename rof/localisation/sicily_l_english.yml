@@ -183,6 +183,8 @@
  SCI_blacker_ops_desc:0 ""
  SCI_blacker_ops_2:0 "Stronger Riots in Tunisia"
  SCI_blacker_ops_2_desc:0 ""
+ SCI_empire:0 "Imperial Glory"
+ SCI_empire_desc:0 ""
  #Advisors/Military Staff
  SCI_giacomo_baristo:0 "Giacomo Baristo"
  SCI_benito_frigo:0 "Benito Frigo"

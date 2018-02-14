@@ -1036,7 +1036,7 @@ focus_tree = {
 	##Infrastructure
 	focus = {
 		id = SCI_public_broadcasting
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_focus_goal_radio
 		x = 18
 		y = 0
 		cost = 10
@@ -1046,6 +1046,21 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = SCI_public_broadcast
+		}
+	}
+	focus = {
+		id = SCI_popular_radio
+		icon = GFX_focus_goal_radio
+		x = 19
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SCI_public_broadcasting }
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = electronics } 
 		}
 	}
 	focus = {
@@ -1062,22 +1077,6 @@ focus_tree = {
 		completion_reward = {
 			#add_research_slot = 1
 			add_tech_bonus = { bonus = 0.5 uses = 2 category = industry } 
-		}
-	}
-	focus = {
-		id = SCI_popular_radio
-		#icon = GFX_goal_generic_secret_weapon
-		x = 19
-		y = 1
-		cost = 10
-		available_if_capitulated = no
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = { focus = SCI_public_broadcasting }
-		completion_reward = {
-			#add_research_slot = 1
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = electronics } 
 		}
 	}
 	focus = {
@@ -1246,7 +1245,7 @@ focus_tree = {
 	##Airforce
 	focus = {
 		id = SCI_flag_carrier
-		#icon = GFX_goal_generic_soviet_construction
+		icon = GFX_focus_goal_flag_carrier
 		x = 26
 		y = 0
 		cost = 10
