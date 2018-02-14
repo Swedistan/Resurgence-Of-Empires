@@ -359,4 +359,21 @@ focus_tree = {
 		}
     }
    }
+    focus = {
+		id = destroy_the_communists
+		icon = GFX_goal_generic_major_war
+		text = "Desotry The Communists"
+		x = 0
+		y = 4
+		cost = 10
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = crush_the_duchies }
+		completion_reward = {
+			add_state_core = 162
+			create_wargoal = { type = annex_everything target = TUS }
+		}
+	}
 }    
