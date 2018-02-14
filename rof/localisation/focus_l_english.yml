@@ -1913,4 +1913,5 @@
  focus_on_smaller_aircraft_desc:0 "We must focus on making smaller aircraft, like fighters, so that we can rule the skies and stop any enemy bomber from reaching our cities and industry."
  focus_on_larger_aircraft:0 "Focus On Larger Aircraft"
  focus_on_larger_aircraft_desc:0 "We must focus on making larger aircraft, like bombers, so that we can crush our enemies industry and cities, to force them into submission."
-
+ found_naval_academy:0 "Found A Naval Academy"
+ found_naval_academy_desc:0 "We must found our own naval academy to train admirals to rules the seas and vanquish the navies of our foes."
