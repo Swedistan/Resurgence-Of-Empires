@@ -504,4 +504,126 @@ focus_tree = {
             }
         }
     }
+        focus= {
+        id = large_ship_navy
+        icon = GFX_goal_generic_navy_battleship
+        x = 17
+        y = 2
+        cost = 10
+        available_if_capitulated = yes
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = { focus = found_naval_academy }
+        mutually_exclusive  = { focus = screening_navy }
+        completion_reward = {
+            add_tech_bonus = {
+                name = cr_bonus
+                bonus = 0.5
+                uses = 2
+                technology = improved_light_cruiser
+				technology = advanced_light_cruiser
+				technology = improved_heavy_cruiser
+				technology = advanced_heavy_cruiser
+            }
+            add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = basic_battlecruiser
+				technology = basic_battleship
+				technology = improved_battleship
+				technology = advanced_battleship
+				technology = heavy_battleship
+				technology = heavy_battleship2
+				technology = early_carrier
+				technology = basic_carrier
+				technology = improved_carrier
+				technology = advanced_carrier
+			}
+        }
+    }
+    focus = {
+        id = conquer_piedmont
+        icon = GFX_goal_generic_occupy_states_ongoing_war
+        x = 0
+        y = 5
+        cost = 10
+        available_if_capitulated = yes
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = { focus = destroy_the_communists }
+        completion_reward = {
+            add_state_core = 735
+            add_state_core = 158
+			create_wargoal = { type = annex_everything target = PIE }
+        }
+    }
+    focus = {
+        id = conquer_milan
+        icon = GFX_goal_generic_political_pressure
+        x = 2
+        y = 5
+        cost = 10
+        available_if_capitulated = yes
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = { focus = destroy_the_communists }
+        completion_reward = {
+            add_state_core = 159
+			create_wargoal = { type = annex_everything target = MIL }
+    }
+    focus = {
+        id = crush_the_republic
+        icon = GFX_goal_generic_occupy_states_ongoing_war
+        x = 1
+        y = 6
+        cost = 10
+        available_if_capitulated = yes
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = { focus = conquer_milan }
+        prerequisite = { focus = conquer_piedmont }
+        completion_reward = {
+            add_state_core = 115
+            add_state_core = 116
+            add_state_core = 117
+            add_state_core = 156
+            create_wargoal = { type = annex_everything target = SCI }
+        }
+    }
+    focus = {
+        id = encourage_industrial_developments
+        icon =
+        x = 29
+        y = 1
+        cost = 10 
+        available_if_capitulated = yes
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = { focus = roman_university }
+        completion_reward = {
+            add_tech_bonus = { bonus = 0.5 uses = 2 category = industry } 
+        }
+    }
+    focus = {
+        id = develop_military_radios
+        icon =
+        x = 27
+        y = 1
+        cost = 10
+        available_if_capitulated = yes
+        ai_will_do = {
+            factor = 1
+        }
+        prerequisite = { focus = roman_university }
+        completion_reward = {
+            add_tech_bonus = { bonus = 0.5 uses = 2 category = electronics }
+        }
+    }
 }    
