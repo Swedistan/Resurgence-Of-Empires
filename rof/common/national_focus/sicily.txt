@@ -26,7 +26,7 @@ focus_tree = {
 		cost = 1
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		available = {
 			date > 1937.5.2
@@ -46,7 +46,7 @@ focus_tree = {
 		icon = GFX_goal_support_democracy
 		x = 5
 		y = 1
-		cost = 10
+		cost = 1
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -235,10 +235,10 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus
 		x = 9
 		y = 1
-		cost = 10
+		cost = 1
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 75
 		}
 		available = {
 		}
@@ -257,7 +257,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 25
 		}
 		prerequisite = { focus = SCI_election_neutrality }
 		completion_reward = {
@@ -273,6 +273,13 @@ focus_tree = {
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					date > 1939.1.1
+					threat > 0.5 
+				}			
+			}
 		}
 		prerequisite = { focus = SCI_royal_guards }
 		completion_reward = {
@@ -290,7 +297,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
 		prerequisite = { focus = SCI_african_claims }
 		completion_reward = {
@@ -309,7 +316,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 15
 		}
 		prerequisite = { focus = SCI_libyan_intervention }
 		completion_reward = {
@@ -328,7 +335,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 25
 		}
 		prerequisite = { focus = SCI_tunisian_black_ops }
 		completion_reward = {
@@ -348,7 +355,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		available = {
 			has_country_flag = tunisia_offer_refused
@@ -370,7 +377,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
 		prerequisite = { focus = SCI_royal_guards }
 		completion_reward = {
@@ -387,7 +394,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
 		prerequisite = { focus = SCI_albanian_claim }
 		completion_reward = {
@@ -417,7 +424,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 25
 		}
 		prerequisite = { focus = SCI_albanian_takeover }
 		completion_reward = {
@@ -432,7 +439,11 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 25
+			modifier = {
+				factor = 0
+				threat > 0.5
+			}
 		}
 		prerequisite = { focus = SCI_greek_claims }
 		completion_reward = {
@@ -447,7 +458,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
 		prerequisite = { focus = SCI_greek_invasion }
 		prerequisite = { focus = SCI_offer_buy_tunisia }
@@ -488,7 +499,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 25
 		}
 		prerequisite = { focus = SCI_election_neutrality focus = SCI_election_democratic }
 		completion_reward = {
@@ -500,10 +511,10 @@ focus_tree = {
 		icon = GFX_goal_support_communism
 		x = 11
 		y = 1
-		cost = 10
+		cost = 1
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 25
 		}
 		prerequisite = { focus = SCI_election_1937 }
 		mutually_exclusive  = { focus = SCI_election_fascism focus = SCI_election_democratic focus = SCI_election_neutrality }
@@ -780,10 +791,10 @@ focus_tree = {
 		icon = GFX_goal_support_fascism
 		x = 15
 		y = 1
-		cost = 10
+		cost = 1
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 25
 		}
 		available = {
 			always = no
@@ -1043,7 +1054,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
 		completion_reward = {
 			add_ideas = SCI_public_broadcast
@@ -1068,7 +1079,7 @@ focus_tree = {
 		id = SCI_research_grants
 		icon = GFX_focus_research
 		x = 17
-		y = 1
+		y = 25
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
@@ -1088,7 +1099,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 25
 		}
 		prerequisite = { focus = SCI_popular_radio }
 		prerequisite = { focus = SCI_research_grants }
@@ -1105,7 +1116,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 25
 		}
 		prerequisite = { focus = SCI_research_grants }
 		prerequisite = { focus = SCI_popular_radio }
@@ -1122,9 +1133,10 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
 		completion_reward = {
+			add_political_power = 20
 		}
 	}
 	focus = {
@@ -1135,7 +1147,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 25
 		}
 		prerequisite = { focus = SCI_road_survey }
 		completion_reward = {
@@ -1158,7 +1170,11 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 25
+			modifier = {
+				factor = 100
+				has_completed_focus = SCI_standardize_gauge
+			}
 		}
 		prerequisite = { focus = SCI_standardize_gauge }
 		completion_reward = {
@@ -1175,7 +1191,11 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 25
+			modifier = {
+				factor = 100
+				has_completed_focus = SCI_standardize_gauge
+			}
 		}
 		prerequisite = { focus = SCI_standardize_gauge }
 		completion_reward = {
@@ -1195,7 +1215,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
 		completion_reward = {
 			117 = {
@@ -1212,7 +1232,11 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 25
+			modifier = {
+				factor = 50
+				date > 1938.1.1
+			}
 		}
 		prerequisite = { focus = SCI_state_owned_enterprises }
 		completion_reward = {
@@ -1230,7 +1254,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 20
 		}
 		prerequisite = { focus = SCI_military_industrial_complex }
 		prerequisite = { focus = SCI_rebuild_railway_2 }
@@ -1286,6 +1310,10 @@ focus_tree = {
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 50
+				date = 1937.1.1
+			}
 		}
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.5 uses = 2 category = naval_doctrine } 
@@ -1317,7 +1345,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 25
 		}
 		prerequisite = { focus = SCI_naval_academy }
 		completion_reward = {
@@ -1333,7 +1361,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		prerequisite = { focus = SCI_naval_research_facility }
 		prerequisite = { focus = SCI_special_forces } 
@@ -1350,7 +1378,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		prerequisite = { focus = SCI_naval_research_facility }
 		prerequisite = { focus = SCI_pilot_school }
@@ -1366,7 +1394,7 @@ focus_tree = {
 		cost = 1
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		available = {
 			date > 1942.5.2
@@ -1403,7 +1431,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		prerequisite = { focus = SCI_election_1942 }
 		mutually_exclusive = { focus = SCI_election_1942_democratic}
@@ -1476,6 +1504,10 @@ focus_tree = {
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 50
+				date > 1938.1.1
+			}
 		}
 		completion_reward = {
 			army_experience = 10 
@@ -1490,7 +1522,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 15
 		}
 		prerequisite = { focus = SCI_army_training }
 		completion_reward = {
@@ -1506,7 +1538,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 25
 		}
 		prerequisite = { focus = SCI_army_training }
 		completion_reward = {
@@ -1521,7 +1553,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 25
 		}
 		prerequisite = { focus = SCI_infantry_equipment }
 		completion_reward = {
@@ -1536,7 +1568,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 25
 		}
 		prerequisite = { focus = SCI_infantry_equipment }
 		completion_reward = {
@@ -1551,7 +1583,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 25
 		}
 		prerequisite = { focus = SCI_army_training }
 		completion_reward = {
@@ -1566,7 +1598,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		prerequisite = { focus = SCI_army_training }
 		completion_reward = {
@@ -1581,7 +1613,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		prerequisite = { focus = SCI_tank_division }
 		prerequisite = { focus = SCI_artillery_factories }
