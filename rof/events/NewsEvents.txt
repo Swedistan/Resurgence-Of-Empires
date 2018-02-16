@@ -12771,3 +12771,80 @@ news_event = {
 		name = news.1000.a
 	}
 }
+# Albania Submits
+news_event = {
+	id = news.1001
+	title = news.1001.t
+	desc = news.1001.d
+	picture = GFX_news_event_018
+	major = no
+	is_triggered_only = yes
+	option = {
+		name = news.1001.a
+		trigger = {
+			NOT = {
+				tag = SCI
+			}
+		}
+	}
+	option = {
+		name = news.1001.b
+		trigger = {
+			tag = SCI
+			threat > 0.5
+		}
+		SCI = {
+			annex_country = { target = ALB }
+		}
+	}
+	option = {
+		name = news.1001.b
+		trigger = {
+			tag = SCI
+			threat < 0.5
+		}
+		SCI = {
+			puppet = ALB
+		}
+	}
+}
+# Buying Tunisia
+news_event = {
+	id = news.1002
+	title = news.1002.t
+	desc = news.1002.d
+	picture = GFX_news_event_018
+	major = no
+	is_triggered_only = yes
+	option = {
+		name = news.1002.a
+		trigger = {
+			NOT = {
+				OR = {
+					tag = SCI
+					tag = FRA
+				}
+			}
+		}
+	}
+	option = {
+		name = news.1002.b
+		trigger = {
+			tag = SCI
+		}
+		SCI = {
+			set_state_owner = 458
+			set_state_owner = 665
+			add_political_power = -50
+		}
+	}
+	option = {
+		name = news.1002.c
+		trigger = {
+			tag = FRA
+		}
+		FRA = {
+			add_political_power = 50
+		}
+	}
+}

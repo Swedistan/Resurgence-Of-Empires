@@ -17,7 +17,11 @@ country_event = {
 		name = Sicily.1.a
 		SCI = {
 			add_threat = 2 
-			annex_country = { target = ALB }
+		}
+		hidden_effect = {
+			every_country = {
+				news_event = { id = news.1001 days = 1 }
+			}
 		}
 	}
 	option = { #refuse
@@ -57,7 +61,11 @@ country_event = {
 		name = Sicily.3.a
 		SCI = {
 			add_threat = 2 
-			puppet = ALB
+		}
+		hidden_effect = {
+			every_country = {
+				news_event = { id = news.1001 days = 1 }
+			}
 		}
 	}
 	option = { #refuse
@@ -113,11 +121,11 @@ country_event = {
 	is_triggered_only = yes
 	option = { #accept
 		name = Sicily.6.a
-		SCI = {
-			set_state_owner = 458
-			set_state_owner = 665
+		hidden_effect = {
+			every_country = {
+				news_event = { id = news.1002 days = 1 }
+			}
 		}
-		add_political_power = 50
 	}
 	option = { #decline
 		name = Sicily.6.b
@@ -134,11 +142,11 @@ country_event = {
 	is_triggered_only = yes
 	option = { #accept
 		name = Sicily.7.a
-		SCI = {
-			set_state_owner = 458
-			set_state_owner = 665
+		hidden_effect = {
+			every_country = {
+				news_event = { id = news.1002 days = 1 }
+			}
 		}
-		add_political_power = 50
 	}
 	option = { #decline
 		name = Sicily.7.b
