@@ -12759,7 +12759,7 @@ news_event = {
 
 ######MOD
 ##########
-# Marco Polo Bridge II
+# Tuscan-Sicilian Alliance
 news_event = {
 	id = news.1000
 	title = news.1000.t

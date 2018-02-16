@@ -32,7 +32,6 @@ country_event = {
 	id = Sicily.2
 	title = Sicily.2.t
 	desc = Sicily.2.d
-	picture = GFX_report_event_royal_parade
 	
 	is_triggered_only = yes
 	
