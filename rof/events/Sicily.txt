@@ -31,7 +31,7 @@ country_event = {
 		}
 	}
 }
-# Albanian demand rejected, threat > 50
+# Albanian demand rejected
 country_event = {
 	id = Sicily.2
 	title = Sicily.2.t
@@ -41,6 +41,18 @@ country_event = {
 	
 	option = {
 		name = Sicily.2.a
+		trigger = {
+			threat < 0.5
+		}
+		create_wargoal = { type = puppet_wargoal_focus target = ALB } 
+		add_threat = 5 
+	}
+	
+	option = {
+		name = Sicily.2.a
+		trigger = {
+			threat > 0.5
+		}
 		create_wargoal = { type = annex_everything target = ALB } 
 		add_threat = 5 
 	}
@@ -71,26 +83,8 @@ country_event = {
 	option = { #refuse
 		name = Sicily.3.b
 		SCI = {
-			country_event = { days = 10 id = Sicily.4 } 
+			country_event = { days = 10 id = Sicily.2 } 
 		}
-	}
-}
-# Albanian demand rejected, threat < 50
-country_event = {
-	id = Sicily.4
-	title = Sicily.4.t
-	desc = Sicily.4.d
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = Sicily.4.a
-		create_wargoal = { type = puppet_wargoal_focus target = ALB } 
-		add_threat = 5 
-	}
-	option = {
-		name = Sicily.4.b
-		add_political_power = -50
 	}
 }
 # Invited Tuscany
